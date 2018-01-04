@@ -1,8 +1,13 @@
-mixin header-dashboard(title)
-  header.header-dashboard
-    //For the best UX we put the sidebar button on the header
-    a.sidebar__toggle-btn(href='#')
-      +anticon('menufold')
-    p.title.title--orange-dark= title
-    if block
-      block
+include ../elements/elements
+
+mixin header(ads)
+  header.header
+    .container
+      .text-center.mb-3
+        h1.header__title.font-weight-bold Chuyên trang thông tin thương mại điện tử
+        h2.header__sub-title Giúp bạn tìm giá tốt nhất và tham khảo thông tin sản phẩm trước khi mua hàng
+      .d-flex.justify-content-between
+        h2.header__logo
+          a(href='#') Timzatot logo
+        +search()
+        img.header__ads(src='images/' + ads)
