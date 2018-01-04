@@ -1,0 +1,26 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/animate';
+
+@import 'vendors/bootstrap-override-variable';
+@import 'bootstrap';
+@import 'ionicons';
+
+@import 'base/typography';
+@import 'base/colors';
+@import 'base/images';
+@import 'base/global';
+@import 'base/reset';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/ui-elements';
+@import 'components/navigation-tab';
+@import 'components/table';
+@import 'components/block';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/dropdowns';
+@import 'components/search';

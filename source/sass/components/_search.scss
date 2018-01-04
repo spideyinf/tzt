@@ -1,0 +1,12 @@
+.search {
+  .form-control {
+  }
+
+  &__icon {
+    cursor: pointer;
+    transform: scaleX(-1);
+    font-size: rem(26);
+    color: $primary-orange;
+    padding: 3px;
+  }
+}

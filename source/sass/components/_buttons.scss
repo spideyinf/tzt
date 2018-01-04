@@ -1,0 +1,49 @@
+.btn {
+  color: $primary-orange;
+  border: 1px solid $primary-orange;
+  font-size: rem(15);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &--solid {
+    color: $white;
+    background: $primary-gradient;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($primary-orange, 0.25);
+  }
+
+  &-sm {
+    font-size: rem(14);
+    line-height: 1.125;
+  }
+
+  &--slide-nav {
+    background-color: $primary-gray100;
+    color: $white;
+    border-radius: 50%;
+    border: 0;
+  }
+
+  &--tag {
+    color: $primary-gray200;
+    border: 1px solid $primary-gray200;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+      background: $primary-gray200;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($primary-gray200, 0.15);
+    }
+  }
+
+  &--icon {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+}

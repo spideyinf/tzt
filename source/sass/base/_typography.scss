@@ -1,0 +1,22 @@
+p {
+  font-size: rem(14);
+  color: $primary-black;
+}
+
+.title {
+  font-weight: $font-weight-bold;
+  font-size: rem(18);
+  color: $primary-black;
+
+  &--orange {
+    color: $primary-orange-dark;
+  }
+
+  &--gray {
+    color: $primary-gray100;
+  }
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}

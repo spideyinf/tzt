@@ -1,0 +1,19 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/header/header
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.p001_home)
+
+  body
+    +button('Tìm giá tốt', 'anchor')
+    +button('Tìm giá tốt', 'anchor').btn--solid
+    +button('Xem ngay', 'anchor', 'ion-ios-arrow-right').btn-sm
+    +button('Ghế ăn dặm', 'anchor').btn-sm.btn--tag
+
+    +search()
+
+
