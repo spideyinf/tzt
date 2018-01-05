@@ -214,3 +214,18 @@ mixin search()
       +ionicon('ion-ios-search-strong').search__icon
     input(type='text' class='form-control' placeholder='Search for it' aria-label='')
 
+
+
+//-
+//- Elements :: BS tabs
+//-
+mixin tabs(data)
+  ul.nav.nav-tabs&attributes(attributes)(role='tablist')
+    each tab in data.tabs
+      //- Nav tabs
+      li(role='presentation' class= tab.active ? 'active' : '')
+        a(href=tab.name, aria-controls=tab, role='tab' data-toggle='tab')= tab.title
+
+  //- Tab panels
+  .tab-content
+    block

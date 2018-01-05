@@ -1,0 +1,19 @@
+mixin navbar(activeLink)
+  .tzt-navbar
+   ul.container.d-flex
+    li.tzt-navbar__item(class= activeLink === 'Danh mục sản phẩm' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link(href='#')
+        +ionicon('ion-android-menu').mx-2
+        span Danh mục sản phẩm
+    li.tzt-navbar__item(class= activeLink === 'Trang chủ' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link(href='#')
+        span Trang chủ
+    li.tzt-navbar__item(class= activeLink === 'Tin tức' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link(href='#')
+        span Tin tức
+    li.tzt-navbar__item(class= activeLink === 'Khuyến mại giảm giá' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link(href='#')
+        span Khuyến mại giảm giá
+    li.tzt-navbar__item(class= activeLink === 'Thông tin sản phẩm' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link(href='#')
+        span Thông tin sản phẩm

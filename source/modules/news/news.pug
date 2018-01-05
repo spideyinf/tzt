@@ -1,0 +1,8 @@
+mixin news-aside(data)
+  .col-3
+    p.title.title--orange= data.title
+    ul.news-aside
+      each item in data.news
+        li.news-aside__item
+          img(src=`images/${item.img}`)
+          p item.title

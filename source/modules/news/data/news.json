@@ -1,0 +1,41 @@
+{
+  "newsAside": {
+    "data": {
+      "title": "Thông tin hữu ích",
+      "news": [
+        {
+          "title": "Đừng bỏ qua 5 tiêu chí này khi mẹ mua xe đẩy cho bé",
+          "img": "news_aside_img01.png"
+        },
+        {
+          "title": "Giá xe đẩy Seababy tại 5 cửa hàng mẹ và bé nổi tiếng nhất",
+          "img": "news_aside_img02.png"
+        },
+        {
+          "title": "Cách giặt rửa xe đẩy mà không cần tháo gỡ﻿",
+          "img": "news_aside_img03.png"
+        },
+        {
+          "title": "10 xe đẩy được ưa chuộng nhất vào mùa Đông",
+          "img": "news_aside_img04.png"
+        },
+        {
+          "title": "Đừng bỏ qua 5 tiêu chí này khi mẹ mua xe đẩy cho bé",
+          "img": "news_aside_img05.png"
+        },
+        {
+          "title": "Đừng bỏ qua 5 tiêu chí này khi mẹ mua xe đẩy cho bé",
+          "img": "news_aside_img06.png"
+        },
+        {
+          "title": "Đừng bỏ qua 5 tiêu chí này khi mẹ mua xe đẩy cho bé",
+          "img": "news_aside_img07.png"
+        },
+        {
+          "title": "Đừng bỏ qua 5 tiêu chí này khi mẹ mua xe đẩy cho bé",
+          "img": "news_aside_img08.png"
+        }
+      ]
+    }
+  }
+}

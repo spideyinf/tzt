@@ -1,0 +1,27 @@
+.tzt-navbar {
+  width: 100%;
+  background-color: $white;
+  padding: 10px 0;
+  border-top: 1px solid $primary-gray100;
+  border-bottom: 1px solid $primary-gray100;
+
+  &__item {
+    font-size: rem(18);
+    margin-right: rem(30);
+
+    &--active {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__link {
+    color: $primary-black;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover,
+    &:active {
+      font-weight: $font-weight-bold;
+      color: $primary-black;
+    }
+  }
+}
