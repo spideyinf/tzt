@@ -1,10 +1,23 @@
-mixin hot-deal(img)
-  .card.tzt-card__hot-deal
-    h5.tzt-card__hot-deal__title Tên sản phẩm - Lorem isprum de rose a pirum dote 
-    img.card-img-top.tzt-card__hot-deal__img(src= img)
-    .d-flex.justify-content-between
+mixin hot-deal()
+  .card.tzt-hot-deal&attributes(attributes)
+    h5.tzt-hot-deal__title.font-size-18 Tên sản phẩm Lorem isprum de rose a pirum dote 
+    img.card-img-top.tzt-hot-deal__img(src= 'http://via.placeholder.com/168x180')
+    .d-flex.justify-content-between.mt-2
       p Tiết kiệm
-      p 209.000đ
-    .d-flex.justify-content-between
-      p.tzt-card__hot-deal__saving 25%
-      p.title 180.000đ
+      p.tzt-hot-deal__old-price 209.000đ
+    .d-flex.justify-content-between.align-items-center
+      p.tzt-hot-deal__saving 25%
+      p.title.font-size-20 180.000đ
+
+mixin product-card()
+  .card.tzt-product-card&attributes(attributes)
+    img.card-img-top.tzt-product-card__img(src='http://via.placeholder.com/160x180')
+    h6.tzt-product-card__title.mb-2.px-2 Tên loại sản phẩm Lorem isprum
+    .text-center
+      p Từ
+        span.tzt-product-card__price.ml-1 125.000đ
+      p.my-1.font-color-gray100.font-size-12 Có
+        span 05
+        span nơi bán
+      +button('Tìm giá tốt', 'anchor').btn--solid
+

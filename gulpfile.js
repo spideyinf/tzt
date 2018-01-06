@@ -13,8 +13,8 @@ var pug = require('pug');
 
 var scssLint = require('gulp-scss-lint');
 
-var errorHandler = function() {
-  return gplumber(function(error) {
+var errorHandler = function () {
+  return gplumber(function (error) {
     var msg = error.codeFrame.replace(/\n/g, '\n    ');
 
     gutil.log(
@@ -34,7 +34,7 @@ var source = 'source/',
  * Allow add filter
  *
  */
-pug.filters.code = function(block) {
+pug.filters.code = function (block) {
   return block
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -80,7 +80,8 @@ var scss = {
     includePaths: [
       './node_modules/bootstrap/scss/',
       './node_modules/ionicons/scss',
-      './node_modules/nanoscroller/bin/css/'
+      './node_modules/nanoscroller/bin/css/',
+      './node_modules/owl.carousel/src/scss/'
     ]
   }
 };
@@ -106,76 +107,76 @@ var js = {
  * Allow add filter
  *
  */
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   return browserSync.init(options.browserSync);
 });
 
-gulp.task('watch', function(cb) {
-  $.watch(source + '/sass/**/*.scss', function() {
+gulp.task('watch', function (cb) {
+  $.watch(source + '/sass/**/*.scss', function () {
     gulp.start('compile-styles');
   });
-  $.watch(source + '/images/**/*', function() {
+  $.watch(source + '/images/**/*', function () {
     gulp.start('compile-images');
     gulp.start('build-images-name');
   });
 
-  $.watch([source + '/*.html', source + '/**/*.html'], function() {
+  $.watch([source + '/*.html', source + '/**/*.html'], function () {
     return runSequence('compile-html', browserSync.reload);
   });
 
-  $.watch([source + '/*.pug', source + '/**/*.pug'], function() {
+  $.watch([source + '/*.pug', source + '/**/*.pug'], function () {
     return runSequence('compile-pug', browserSync.reload);
   });
 
-  $.watch(source + '/**/*.js', function() {
+  $.watch(source + '/**/*.js', function () {
     return runSequence('compile-js', browserSync.reload);
   });
 
-  $.watch(source + '/modules/*/data/*.json', function() {
+  $.watch(source + '/modules/*/data/*.json', function () {
     return runSequence('build-html', browserSync.reload);
   });
 });
 
 // copy js
-gulp.task('js', function() {
+gulp.task('js', function () {
   return gulp.src(js.in).pipe(gulp.dest(js.out));
 });
 
 // copy font
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
   return gulp.src(fonts.in).pipe(gulp.dest(fonts.out));
 });
 
 // = Delete
-gulp.task('cleanup', function(cb) {
+gulp.task('cleanup', function (cb) {
   return del(options.del, cb);
 });
 
 // = Build Style
-gulp.task('compile-styles', ['fonts', 'scss-lint'], function(cb) {
+gulp.task('compile-styles', ['fonts', 'scss-lint'], function (cb) {
   return gulp
     .src([source + '/sass/*.scss', '!' + source + '/sass/_*.scss'])
     .pipe($.sourcemaps.init())
     .pipe($.sass(scss.sassOpts).on('error', $.sass.logError))
     .pipe($.autoprefixer('last 2 versions'))
     .pipe(
-      $.sourcemaps.write('./', {
-        includeContent: false,
-        sourceRoot: source + '/sass'
-      })
+    $.sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: source + '/sass'
+    })
     )
     .pipe(gulp.dest(dest + '/css'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('scss-lint', function(cb) {
+gulp.task('scss-lint', function (cb) {
   return gulp
     .src([source + '/sass/*.scss', source + '/sass/**/*.scss'])
     .pipe(scssLint());
 });
 
 // = Build HTML
-gulp.task('compile-html', function(cb) {
+gulp.task('compile-html', function (cb) {
   return gulp
     .src(['*.html', '!_*.html'], { cwd: 'source' })
     .pipe($.prettify(options.htmlPrettify))
@@ -183,27 +184,27 @@ gulp.task('compile-html', function(cb) {
 });
 
 // = Build Pug
-gulp.task('compile-pug', function(cb) {
+gulp.task('compile-pug', function (cb) {
   var jsonData = JSON.parse(fs.readFileSync('./tmp/data.json'));
   options.pug.locals = jsonData;
 
   return gulp
     .src(['*.pug', '!_*.pug'], { cwd: 'source' })
     .pipe(
-      plumber(function(error) {
-        console.log('Error happend!', error.message);
-        this.emit('end');
-      })
+    plumber(function (error) {
+      console.log('Error happend!', error.message);
+      this.emit('end');
+    })
     )
     .pipe($.changed('dest', { extension: '.html' }))
     .pipe(
-      $.pugInheritance({
-        basedir: 'source',
-        skip: ['node_modules']
-      })
+    $.pugInheritance({
+      basedir: 'source',
+      skip: ['node_modules']
+    })
     )
     .pipe($.pug(options.pug))
-    .on('error', function(error) {
+    .on('error', function (error) {
       console.error('' + error);
       this.emit('end');
     })
@@ -212,13 +213,13 @@ gulp.task('compile-pug', function(cb) {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('build-html', function(cb) {
+gulp.task('build-html', function (cb) {
   return runSequence('combine-data', 'compile-pug', 'compile-html', cb);
 });
 
 // = Build JS
 
-gulp.task('compile-js', function() {
+gulp.task('compile-js', function () {
   return gulp
     .src(['*.js', '!_*.js'], { cwd: 'source/js' })
     .pipe($.include(options.include))
@@ -226,12 +227,12 @@ gulp.task('compile-js', function() {
 });
 
 // = Build image
-gulp.task('compile-images', function() {
+gulp.task('compile-images', function () {
   return gulp.src(source + '/images/*.*').pipe(gulp.dest(dest + '/images'));
 });
 
 // = Build images name in json file
-gulp.task('build-images-name', function() {
+gulp.task('build-images-name', function () {
   return gulp
     .src(source + '/images/**/*')
     .pipe(require('gulp-filelist')('filelist.json'))
@@ -239,14 +240,14 @@ gulp.task('build-images-name', function() {
 });
 
 // = Build DataJson
-gulp.task('combine-modules-json', function(cb) {
+gulp.task('combine-modules-json', function (cb) {
   return gulp
     .src(['**/*.json', '!**/_*.json'], { cwd: 'source/modules/*/data' })
     .pipe($.mergeJson('data-json.json'))
     .pipe(gulp.dest('tmp/data'));
 });
 
-gulp.task('combine-modules-data', function(cb) {
+gulp.task('combine-modules-data', function (cb) {
   return gulp
     .src('**/*.json', { cwd: 'tmp/data' })
     .pipe($.mergeJson('data.json'))
@@ -254,13 +255,13 @@ gulp.task('combine-modules-data', function(cb) {
 });
 
 // Service tasks
-gulp.task('combine-data', function(cb) {
+gulp.task('combine-data', function (cb) {
   return runSequence(['combine-modules-json'], 'combine-modules-data', cb);
 });
 
 // ================ Develop
 
-gulp.task('dev', function(cb) {
+gulp.task('dev', function (cb) {
   return runSequence(
     'build',
     ['browser-sync', 'build-images-name', 'watch'],
@@ -269,7 +270,7 @@ gulp.task('dev', function(cb) {
 });
 
 // ================ Build
-gulp.task('build', function(cb) {
+gulp.task('build', function (cb) {
   return runSequence(
     'cleanup',
     'compile-images',

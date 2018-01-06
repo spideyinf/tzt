@@ -47,4 +47,22 @@
     font-size: 12px;
     margin-left: 2px;
   }
+
+  &--contact {
+    background: $secondary-gradient;
+    color: $white;
+    height: 38px;
+  }
+
+  &__contact-icon {
+    font-size: rem(48);
+    margin-right: 8px;
+    align-self: center;
+  }
+
+  &__contact-text {
+    color: $white;
+    font-size: rem(18);
+    align-self: center;
+  }
 }

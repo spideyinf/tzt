@@ -6,6 +6,8 @@
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
 @import 'ionicons';
+@import 'owl.carousel';
+@import 'owl.theme.default';
 
 @import 'base/typography';
 @import 'base/colors';
@@ -25,5 +27,8 @@
 @import 'components/dropdowns';
 @import 'components/search';
 @import 'components/navbar';
+@import 'components/tabs';
+@import 'components/news';
+@import 'components/cards';
 
 @import 'pages/p01-home';

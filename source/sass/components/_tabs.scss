@@ -1,0 +1,59 @@
+//
+// Component: Tabs
+// --------------------------------------------------
+
+.tabs {
+  border: 0;
+
+  > li {
+    &.active > a {
+      font-weight: $font-weight-bold;
+      border: 0;
+      border-bottom: 3px solid $primary-orange;
+      z-index: 3;
+      color: $primary-orange;
+      background: transparent;
+      padding: .88rem 0;
+      margin-right: 4.5rem;
+      margin-bottom: -1px;
+
+
+      @include respond-to(phone-and-down) {
+        margin-right: 2rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 0;
+        border-bottom: 3px solid $primary-orange;
+        z-index: 3;
+        color: $primary-orange;
+        background-color: transparent;
+      }
+    }
+
+    > a {
+      font-weight: $font-weight-bold;
+      color: $primary-gray200;
+      border: 0;
+      background: transparent;
+      padding: .88rem 0;
+      margin-right: 4.5rem;
+      margin-bottom: -1px;
+
+
+      @include respond-to(phone-and-down) {
+        margin-right: 2rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 0;
+        background-color: transparent;
+        color: $primary-orange;
+      }
+    }
+  }
+}

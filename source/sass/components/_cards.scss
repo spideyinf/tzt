@@ -1,0 +1,44 @@
+.tzt-hot-deal {
+  padding: 9px 15px 32px;
+  width: 200px;
+  height: auto;
+
+  &__img {
+    border-radius: 4px;
+    width: 168px;
+    height: 180px;
+    margin: 6px 0;
+  }
+
+  &__old-price {
+    font-size: rem(16);
+    text-decoration: line-through;
+    color: $primary-gray200;
+  }
+  
+  &__saving {
+    font-size: rem(36);
+    color: $primary-orange-dark;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.tzt-product-card {
+  padding-bottom: 10px;
+  width: 160px;
+  height: 328px;
+  margin-bottom: 6px;
+
+  &__img {
+    border-radius: 4px;
+    width: 158px;
+    height: 180px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    font-size: rem(20);
+    color: $primary-orange;
+    font-weight: $font-weight-bold;
+  }
+}

@@ -13,17 +13,12 @@
     a {
       display: block;
       text-indent: -9999rem;
-      width: 55px;
-      height: 170px;
+      width: 170px;
+      height: 55px;
       background-image: url('#{$path-to-images}tzt_logo.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
     }
-  }
-
-  &__ads {
-    width: 45px;
-    height: 170px;
   }
 }

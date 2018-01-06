@@ -4,20 +4,39 @@ include modules/footer/footer
 include modules/elements/elements
 include modules/navbar/navbar
 include modules/cards/cards
+include modules/news/news
+
+- 
+  var meVaBe = {
+    tabs: [
+      {name: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
+      {name: '#sua', title: 'Sữa'},
+      {name: '#xeday', title: 'Xe đẩy'},
+      {name: '#thoitrangchobe', title: 'Thời trang cho bé'},
+    ]
+  }
+
+  var thietBiGiaDung = {
+    tabs: [
+      {name: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
+      {name: '#tivi', title: 'Tivi'},
+      {name: '#dobep', title: 'Đồ bếp'},
+      {name: '#quatsuoi', title: 'Quạt sưởi'},
+    ]
+  }
+
+  var thongTinHuuIch = {
+    title: 'Thông tin hữu ích',
+    news: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }
+
 
 doctype html
 html
   +head(head.p01_home)
 
   body
-    +button('Tìm giá tốt', 'anchor')
-    +button('Tìm giá tốt', 'anchor').btn--solid
-    +button('Xem ngay', 'anchor', 'ion-ios-arrow-right').btn-sm
-    +button('Ghế ăn dặm', 'anchor').btn-sm.btn--tag
-
-    +search()
-    
-    +header('header_ads.png')
+    +header()
     +navbar('Trang chủ')
     main.p01-home
       .p01-home__top-banner
@@ -25,11 +44,111 @@ html
           img(src='images/home_top_banner.png')
       
       .container
-        .hot-deals
-          +hot-deal()
+        // Giá tốt cho bạn
+        h3.title.title--primary Giá tốt cho bạn
+        .hot-deals.owl-carousel.owl-theme
+          .item
+            +hot-deal()
+          .item
+            +hot-deal()
+          .item
+            +hot-deal()
+          .item
+            +hot-deal()
+          .item
+            +hot-deal()
+          .item
+            +hot-deal()
 
-        .p01-home__product
-          figure.p01-home__product-contain
+        // Product: Mẹ và bé
+        h3.title.title--primary Mẹ và bé
+        .row.mb-3
+          figure.p01-home__product-contain.col-sm-9
             .p01-home__banner-slider
-            
-          aside.news
+
+            // Mẹ và bé tabs
+            +tabs(meVaBe).tabs
+
+              block goiychoban
+                .tab-pane-fade.in.active(role='tabpanel' id='goiychoban' aria-labelledby='1')
+                  .d-flex.justify-content-between.flex-wrap
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                    +product-card()
+                  .d-flex.justify-content-end.mt-3.mx-4
+                    +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+              
+              block sua
+              .tab-pane-fade.in.active(role='tabpanel' id='sua' aria-labelledby='#sua')
+                .d-flex.justify-content-between.flex-wrap
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                .d-flex.justify-content-end.mt-3.mx-4
+                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+
+              block xeday
+              .tab-pane-fade.in.active(role='tabpanel' id='xeday' aria-labelledby='#xeday')
+                .d-flex.justify-content-between.flex-wrap
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                .d-flex.justify-content-end.mt-3.mx-4
+                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+
+              block thoitrangchobe
+              .tab-pane-fade.in.active(role='tabpanel' id='thoitrangchobe')
+                .d-flex.justify-content-between.flex-wrap
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                  +product-card()
+                .d-flex.justify-content-end.mt-3.mx-4
+                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+
+          aside.col-sm-3.pl-0
+            +news-aside(thongTinHuuIch)
+
+          .row
+            .col-lg-4
+              img(src='images/home_me_va_be_banner1.png').img-fluid.my-2
+            .col-lg-4
+              img(src='images/home_me_va_be_banner2.png').img-fluid.my-2
+            .col-lg-4
+              img(src='images/home_me_va_be_banner3.png').img-fluid.my-2
+          .row
+            .col-lg-4
+              img(src='images/home_me_va_be_banner4.png').img-fluid.my-2
+            .col-lg-4
+              img(src='images/home_me_va_be_banner5.png').img-fluid.my-2
+            .col-lg-4
+              img(src='images/home_me_va_be_banner6.png').img-fluid.my-2
+    +footer()
+  script(type='text/javascript', src='js/main.js')

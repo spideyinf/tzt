@@ -1,8 +1,41 @@
 mixin news-aside(data)
-  .col-3
-    p.title.title--orange= data.title
-    ul.news-aside
-      each item in data.news
-        li.news-aside__item
-          img(src=`images/${item.img}`)
-          p item.title
+  .news-aside
+    h5.title.title--orange= data.title
+    ul
+      each index in data.news
+        li
+          a(href='#').d-flex.my-3
+            img(src='http://via.placeholder.com/86x86').news-aside__img.mr-2
+            p Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 
+
+mixin news-head()
+  .news-head.d-flex
+    img(src='http://via.placeholder.com/456x295').news-head__img
+    .d-flex.flex-column.ml-3
+      .d-flex
+        +button('Mẹ và bé', 'anchor').mr-2
+        +button('Sữa nội', 'anchor').mr-2
+        +button('Vinamilk', 'anchor').mr-2
+      h6.title.title--orange.mt-3 Lợi ích của các dòng sữa nội
+      .font-color-gray200.mt-1
+        +ionicon('ion-android-calendar')
+        span 10-10-2010
+      p.mt-5.font-color-gray200.text-justify There are many things that are important to catalog design. Your images must be sharp and appealing. Your text and even the font you use for the text is important. The cover page design and the design of your catalog’s product pages all play important roles in designing a catalog that will bring in new customers and sales...
+      .d-flex.justify-content-end
+        +button('Xem thêm', 'anchor')
+          
+mixin news-pre-head()
+  .news-pre-head.col-10
+    .d-flex
+      img(src='http://via.placeholder.com/358x224').news-pre-head__img
+      .d-flex.flex-column.ml-3
+        .d-flex
+          +button('Đồ gia dụng', 'anchor').mr-2
+          +button('Ghế đa năng', 'anchor').mr-2
+        h6.title.title--orange.mt-3 Lợi ích của các dòng sữa nội
+        .font-color-gray200.mt-1
+          +ionicon('ion-android-calendar')
+          span 10-10-2010
+        p.mt-3.font-color-gray200.text-justify There are many things that are important to catalog design. Your images must be sharp and appealing. Your text and even the font you use for the text is important...
+      .news-pre-head__next
+        +ionicon('ion-ios-arrow-right')
