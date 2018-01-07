@@ -23,5 +23,11 @@
     color: $primary-gray200;
     font-size: rem(60);
     padding: 0 30px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-orange;
+    }
   }
 }

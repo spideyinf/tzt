@@ -8,10 +8,12 @@ $(function () {
   'use strict';
 
   $('.hot-deals').owlCarousel({
+    center: true,
     loop: true,
-    margin: 5,
+    margin: 10,
     nav: true,
     dots: false,
+    // autoWidth: true,
     responsive: {
       0: {
         items: 1
@@ -20,26 +22,35 @@ $(function () {
         items: 3
       },
       1000: {
+        items: 4
+      },
+      1200: {
         items: 5
       }
     }
-  })
+  });
 
   $('.p01-home__banner-slider').owlCarousel({
+    center: true,
     loop: true,
-    margin: 20,
+    margin: 0,
     nav: true,
     dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
-  })
+    items: 1,
+    autoWidth: true,
+    autoplay: true,
+    autoplayTimeout: 4500,
+    autoplayHoverPause: true
+  });
+
+  $('.p01-home__feature-shop').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 4500,
+    autoplayHoverPause: true,
+    items: 6
+  });
 })

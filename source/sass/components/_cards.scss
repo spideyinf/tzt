@@ -2,6 +2,11 @@
   padding: 9px 15px 32px;
   width: 200px;
   height: auto;
+  background-color: $primary-white;
+
+  &__title {
+    color: $primary-black;
+  }
 
   &__img {
     border-radius: 4px;
@@ -15,7 +20,7 @@
     text-decoration: line-through;
     color: $primary-gray200;
   }
-  
+
   &__saving {
     font-size: rem(36);
     color: $primary-orange-dark;
@@ -28,6 +33,7 @@
   width: 160px;
   height: 328px;
   margin-bottom: 6px;
+  background-color: $primary-white;
 
   &__img {
     border-radius: 4px;

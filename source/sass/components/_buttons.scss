@@ -66,3 +66,39 @@
     align-self: center;
   }
 }
+
+.owl-theme .owl-nav [class*='owl-'] {
+  font-size: 0;
+  color: $white;
+  background: rgba($primary-gray100, .75);
+  position: absolute;
+  top: 40%;
+  margin: 0;
+  padding: 4px 12px;
+
+  &:hover {
+    background: $primary-orange;
+  }
+
+  &::before,
+  &::after {
+    font-family: 'Ionicons';
+    font-size: 1.64rem;
+  }
+}
+
+.owl-prev {
+  left: 0;
+
+  &::before {
+    content: '\f3d2'
+  }
+}
+
+.owl-next {
+  right: 0;
+
+  &::after {
+    content: '\f3d3';
+  }
+}
