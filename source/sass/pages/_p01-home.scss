@@ -3,4 +3,15 @@
     width: 100%;
     background: $secondary-gradient;
   }
+
+  &__banner-slider {
+    padding: 8px 0;
+    border-top: 1px solid $primary-silver;
+    border-bottom: 1px solid $primary-silver;
+
+    &__img {
+      border-radius: 20px;
+      padding: 1rem;
+    }
+  }
 }

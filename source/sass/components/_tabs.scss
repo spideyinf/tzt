@@ -2,58 +2,45 @@
 // Component: Tabs
 // --------------------------------------------------
 
-.tabs {
-  border: 0;
+.tzt-tabs {
 
-  > li {
-    &.active > a {
-      font-weight: $font-weight-bold;
+  .show.active {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom: 3px solid $primary-orange;
+    z-index: 3;
+    color: $primary-orange;
+    background: transparent;
+    padding: 1rem 1.5rem;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:active,
+    &:focus {
       border: 0;
       border-bottom: 3px solid $primary-orange;
       z-index: 3;
       color: $primary-orange;
-      background: transparent;
-      padding: .88rem 0;
-      margin-right: 4.5rem;
-      margin-bottom: -1px;
-
-
-      @include respond-to(phone-and-down) {
-        margin-right: 2rem;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        border: 0;
-        border-bottom: 3px solid $primary-orange;
-        z-index: 3;
-        color: $primary-orange;
-        background-color: transparent;
-      }
+      background-color: transparent;
     }
+  }
 
-    > a {
-      font-weight: $font-weight-bold;
-      color: $primary-gray200;
+  a {
+    color: $primary-gray200;
+    text-transform: uppercase;
+    border: 0;
+    background: transparent;
+    padding: 1rem 1.5rem;
+
+    &:hover,
+    &:active,
+    &:focus {
       border: 0;
-      background: transparent;
-      padding: .88rem 0;
-      margin-right: 4.5rem;
-      margin-bottom: -1px;
-
-
-      @include respond-to(phone-and-down) {
-        margin-right: 2rem;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        border: 0;
-        background-color: transparent;
-        color: $primary-orange;
-      }
+      font-weight: $font-weight-bold;
+      border-bottom: 3px solid $primary-orange;
+      background-color: transparent;
+      margin-bottom: -2px;
     }
   }
 }

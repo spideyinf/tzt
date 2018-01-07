@@ -1,6 +1,6 @@
 .news-aside {
   background-color: $primary-silver;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 16px;
 
   &__img {
@@ -8,13 +8,20 @@
   }
 }
 
+.news-head {
+  width: 100%;
+  padding: 12px 28px 28px;
+}
+
 .news-pre-head {
   border: 1px solid $primary-gray100;
   border-radius: 4px;
+  max-width: 950px;
+  margin-bottom: 22px;
 
-  &__icon {
+  &__next {
     color: $primary-gray200;
     font-size: rem(60);
-    vertical-align: middle;
+    padding: 0 30px;
   }
 }

@@ -9,25 +9,34 @@ include modules/news/news
 - 
   var meVaBe = {
     tabs: [
-      {name: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
-      {name: '#sua', title: 'Sữa'},
-      {name: '#xeday', title: 'Xe đẩy'},
-      {name: '#thoitrangchobe', title: 'Thời trang cho bé'},
+      {href: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
+      {href: '#sua', title: 'Sữa'},
+      {href: '#xeday', title: 'Xe đẩy'},
+      {href: '#thoitrangchobe', title: 'Thời trang cho bé'}
     ]
   }
 
   var thietBiGiaDung = {
     tabs: [
-      {name: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
-      {name: '#tivi', title: 'Tivi'},
-      {name: '#dobep', title: 'Đồ bếp'},
-      {name: '#quatsuoi', title: 'Quạt sưởi'},
+      {href: '#goiychoban', title: 'Gợi ý cho bạn', active: true},
+      {href: '#tivi', title: 'Tivi'},
+      {href: '#dobep', title: 'Đồ bếp'},
+      {href: '#quatsuoi', title: 'Quạt sưởi'}
     ]
   }
 
   var thongTinHuuIch = {
     title: 'Thông tin hữu ích',
-    news: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    news: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  }
+
+  var thongTinSanPham = {
+    tabs: [
+      {href: '#thong-tin-thi-truong', title: 'Thông tin thị trường', active: true},
+      {href: '#danh-gia-san-pham', title: 'Đánh giá sản phẩm'},
+      {href: '#gia-ca-thi-truong', title: 'Giá cả thị trường'},
+      {href: '#meo-vat', title: 'Mẹo vặt'}
+    ]
   }
 
 
@@ -41,100 +50,109 @@ html
     main.p01-home
       .p01-home__top-banner
         .container
-          img(src='images/home_top_banner.png')
-      
+          .row
+            img(src='images/home_top_banner.png')
+
       .container
-        // Giá tốt cho bạn
-        h3.title.title--primary Giá tốt cho bạn
-        .hot-deals.owl-carousel.owl-theme
-          .item
-            +hot-deal()
-          .item
-            +hot-deal()
-          .item
-            +hot-deal()
-          .item
-            +hot-deal()
-          .item
-            +hot-deal()
-          .item
-            +hot-deal()
+        .row
+          // Giá tốt cho bạn
+          h3.title.title--primary Giá tốt cho bạn
+          .hot-deals.owl-carousel.owl-theme
+            .item
+              +hot-deal()
+            .item
+              +hot-deal()
+            .item
+              +hot-deal()
+            .item
+              +hot-deal()
+            .item
+              +hot-deal()
+            .item
+              +hot-deal()
 
         // Product: Mẹ và bé
         h3.title.title--primary Mẹ và bé
-        .row.mb-3
-          figure.p01-home__product-contain.col-sm-9
-            .p01-home__banner-slider
+        .row
+          .col-sm-9
+            figure.p01-home__product-contain.mb-3
+              .p01-home__banner-slider.owl-carousel.owl-theme
+                .item
+                  img(src='http://via.placeholder.com/773x206').p01-home__banner-slider__img
+                .item
+                  img(src='http://via.placeholder.com/773x206').p01-home__banner-slider__img
+                .item
+                  img(src='http://via.placeholder.com/773x206').p01-home__banner-slider__img
 
-            // Mẹ và bé tabs
-            +tabs(meVaBe).tabs
+              // Mẹ và bé tabs
+              +tabs(meVaBe).tzt-tabs
 
-              block goiychoban
-                .tab-pane-fade.in.active(role='tabpanel' id='goiychoban' aria-labelledby='1')
-                  .d-flex.justify-content-between.flex-wrap
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                    +product-card()
-                  .d-flex.justify-content-end.mt-3.mx-4
-                    +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
-              
-              block sua
-              .tab-pane-fade.in.active(role='tabpanel' id='sua' aria-labelledby='#sua')
-                .d-flex.justify-content-between.flex-wrap
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                .d-flex.justify-content-end.mt-3.mx-4
-                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+                block goiychoban
+                  .tab-pane.fade.mt-3.show.active(role='tabpanel' id='goiychoban')
+                    .d-flex.justify-content-between.flex-wrap
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                    .d-flex.justify-content-end.mt-3.mx-4
+                      +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+                
+                block sua
+                  .tab-pane.fade.mt-3(role='tabpanel' id='sua')
+                    .d-flex.justify-content-between.flex-wrap
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                    .d-flex.justify-content-end.mt-3.mx-4
+                      +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
 
-              block xeday
-              .tab-pane-fade.in.active(role='tabpanel' id='xeday' aria-labelledby='#xeday')
-                .d-flex.justify-content-between.flex-wrap
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                .d-flex.justify-content-end.mt-3.mx-4
-                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+                block xeday
+                  .tab-pane.fade.mt-3(role='tabpanel' id='xeday')
+                    .d-flex.justify-content-between.flex-wrap
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                    .d-flex.justify-content-end.mt-3.mx-4
+                      +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
 
-              block thoitrangchobe
-              .tab-pane-fade.in.active(role='tabpanel' id='thoitrangchobe')
-                .d-flex.justify-content-between.flex-wrap
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                  +product-card()
-                .d-flex.justify-content-end.mt-3.mx-4
-                  +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
-
-          aside.col-sm-3.pl-0
-            +news-aside(thongTinHuuIch)
+                block thoitrangchobe
+                  .tab-pane.fade.mt-3(role='tabpanel' id='thoitrangchobe')
+                    .d-flex.justify-content-between.flex-wrap
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                      +product-card()
+                    .d-flex.justify-content-end.mt-3.mx-4
+                      +button('Xem thêm', 'anchor', 'ion-ios-arrow-forward')
+          .col-sm-3.px-0
+            aside
+              +news-aside(thongTinHuuIch)
 
           .row
             .col-lg-4
@@ -150,5 +168,44 @@ html
               img(src='images/home_me_va_be_banner5.png').img-fluid.my-2
             .col-lg-4
               img(src='images/home_me_va_be_banner6.png').img-fluid.my-2
+
+          // Tin tức
+          h3.title.title--primary Thông tin sản phẩm
+          .row
+            +tabs(thongTinSanPham).tzt-tabs
+
+            block thong-tin-thi-truong
+              .tab-pane.fade.mt-3.show.active(role='tabpanel' id='thong-tin-thi-truong')
+                +news-head()
+                .d-flex.flex-column.align-items-center.w-100
+                  +news-pre-head()
+                  +news-pre-head()
+                  +news-pre-head()
+                  
+            block danh-gia-san-pham
+              .tab-pane.fade.mt-3(role='tabpanel' id='danh-gia-san-pham')
+                +news-head()
+                .d-flex.flex-column.align-items-center.w-100
+                  +news-pre-head()
+                  +news-pre-head()
+                  +news-pre-head()
+                  
+            block gia-ca-thi-truong
+              .tab-pane.fade.mt-3(role='tabpanel' id='gia-ca-thi-truong')
+                +news-head()
+                .d-flex.flex-column.align-items-center.w-100
+                  +news-pre-head()
+                  +news-pre-head()
+                  +news-pre-head()
+
+            block meo-vat
+              .tab-pane.fade.mt-3(role='tabpanel' id='meo-vat')
+                +news-head()
+                .d-flex.flex-column.align-items-center.w-100
+                  +news-pre-head()
+                  +news-pre-head()
+                  +news-pre-head()
+
+
     +footer()
   script(type='text/javascript', src='js/main.js')

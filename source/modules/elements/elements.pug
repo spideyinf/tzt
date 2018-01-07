@@ -220,11 +220,11 @@ mixin search()
 //- Elements :: BS4 tabs
 //-
 mixin tabs(data)
-  nav
+  nav.w-100
     .nav.nav-tabs&attributes(attributes)(role='tablist')
       each tab in data.tabs
         //- Nav tabs
-        a.nav-item.nav-link(role='tab' class= tab.active ? 'active' : '' href= tab.name, id='1', aria-controls= tab.title, aria-selected= tab.active ? 'true' : 'false')= tab.title
+        a.nav-item.nav-link(role='tab', data-toggle='tab' class= tab.active ? 'show active' : '', href= tab.href)= tab.title
 
   //- Tab panels
   .tab-content
