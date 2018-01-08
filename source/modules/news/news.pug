@@ -1,20 +1,20 @@
 mixin news-aside(data)
-  .news-aside
+  .news-wrapper&attributes(attributes)
     h5.title.title--orange= data.title
     ul
       each index in data.news
         li
           a(href='#').d-flex.my-3
-            img(src='http://via.placeholder.com/86x86').news-aside__img.mr-2
+            img(src='http://via.placeholder.com/86x86').img-rounded.mr-2
             p Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 
 
 mixin news-aside-type2(data)
-  h5.title.title--orange= data.title
-  ul.news-aside
+  h5.title.title--orange.title--upper.my-3= data.title
+  ul.news-wrapper
     each index in data.news
       li
-        a(href='#').d-flex.my-3
-          img(src='http://via.placeholder.com/86x86').news-aside__img.mr-2
+        a(href='#').d-flex.mb-3
+          img(src='http://via.placeholder.com/86x86').img-rounded.mr-2
           p Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 
 
 mixin news-head()
@@ -51,27 +51,29 @@ mixin news-pre-head()
 mixin news-tabs(data)
   .tab-content.news-tabs__content
     each tab in data.tabs
-      //- Tab pane
       .tab-pane.fade(role='tabpanel', class= tab.active ? 'show active' : '', id= tab.id)
-        img(src=`images/${tab.img}`).news-tabs__content__img
+        img(src= tab.img).news-tabs__content__img
         .news-tabs__content__caption
           h5.title.title--white= tab.title
           p.font-color-white Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-  .nav.nav-pills.flex-column.news-tabs__tabs&attributes(attributes)(role='tablist')
+  .nav.nav-pills.flex-column.news-tabs__tabs(role='tablist')
     each tab in data.tabs
       //- Nav tabs
-      a.nav-link.d-flex(role='tab', data-toggle='tab' class= tab.active ? 'active' : '', href= tab.href)
-        img(src=`images/${tab.thumb}`)
+      a.nav-link.d-flex(role='tab', data-toggle='pill' class= tab.active ? 'active' : '', href= tab.href)
+        img(src= tab.thumb)
         p= tab.title
 
-mixin news-piece
-  .d-flex
-    img(src='http://via.placeholder.com/262x158')
+mixin news-piece()
+  .d-flex.my-2
+    img(src='http://via.placeholder.com/262x158').img-rounded
     .d-flex.flex-column.justify-content-center.ml-3
       h5.title Lợi ích của các dòng sữa nội
       .font-color-gray200.mt-1
         +ionicon('ion-android-calendar')
         span 10-10-2010
       p.mt-3.font-color-gray200.text-justify There are many things that are important to catalog design. Your images must be sharp and appealing. Your text and even the font you use for the text is important...
-      +button('...').btn--primary
+      +button('...', 'anchor').btn--more.my-2
+
+    
+    

@@ -66,6 +66,14 @@
     align-self: center;
   }
 
+  &--more {
+    background: $secondary-gradient;
+    color: $primary-white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 62px;
+  }
+
   &--gototop {
     cursor: pointer;
     position: fixed;
@@ -81,6 +89,9 @@
 
     i {
       font-size: 24px;
+      position: absolute;
+      top: 30%;
+      left: 30%;
     }
   }
 }

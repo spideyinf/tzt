@@ -6,8 +6,12 @@
     "p01_home": {
       "title": "Timzatot Trang chủ"
     },
-    "p01_news": {
+    "p02_news": {
       "title": "Timzatot Tin tức"
+    },
+    
+    "p03_news-detail": {
+      "title": "Timzatot Tin tức chi tiết"
     }
   }
 }

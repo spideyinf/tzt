@@ -31,7 +31,7 @@
 .tzt-product-card {
   padding-bottom: 10px;
   width: 160px;
-  height: 328px;
+  height: auto;
   margin-bottom: 6px;
   background-color: $primary-white;
 
@@ -40,6 +40,10 @@
     width: 158px;
     height: 180px;
     margin-bottom: 16px;
+  }
+
+  &__title {
+    color: $primary-black;
   }
 
   &__price {
