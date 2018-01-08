@@ -52,6 +52,16 @@ $(function() {
     items: 6
   });
 
+  $('.products-seen').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    dots: false,
+    items: 6
+  });
+
+  $('.nano').nanoScroller();
+
   (function goToTop() {
     $(window).scroll(function() {
       if ($(window).scrollTop() >= 200) {

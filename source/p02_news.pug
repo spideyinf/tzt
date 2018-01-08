@@ -7,11 +7,20 @@ include modules/cards/cards
 include modules/news/news
 
 -
-  var danhGiaSanPham = {
+  var newsTabs = {
     tabs: [
-      {href: '#news-1', id: 'news-1' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab1.png', thumb: 'news_tab_thumb1.png', active: true},
-      {href: '#news-2', id: 'news-2' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab2.png', thumb: 'news_tab_thumb2.png'},
-      {href: '#news-3', id: 'news-3' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab3.png', thumb: 'news_tab_thumb3.png'},
+      {href: '#news-1', id: 'news-1', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54', active: true},
+      {href: '#news-2', id: 'news-2', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54'},
+      {href: '#news-3', id: 'news-3', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54'}
+    ]
+  };
+
+  var meVaBe = {
+    tabs: [
+      {href: '#goiy-me-be', title: 'Gợi ý cho bạn', active: true},
+      {href: '#sua', title: 'Sữa'},
+      {href: '#xeday', title: 'Xe đẩy'},
+      {href: '#thoitrangchobe', title: 'Thời trang cho bé'}
     ]
   };
 
@@ -22,17 +31,17 @@ include modules/news/news
 
   var danhGiaSanPham = {
     title: 'Đánh giá sản phẩm',
-    news: [1, 2, 3, 4, 5]
+    news: [1, 2, 3, 4]
   };
 
   var giaCaThiTruong = {
     title: 'Giá cả thị trường',
-    news: [1, 2, 3, 4, 5]
+    news: [1, 2, 3, 4]
   };
 
   var meoVat = {
     title: 'Mẹo vặt',
-    news: [1, 2, 3, 4, 5]
+    news: [1, 2, 3, 4]
   };
 
 doctype html
@@ -46,12 +55,12 @@ html
       .container
 
         // Đánh giá sản phẩm
-        h3.title.title--primary Đánh giá sản phẩm
         .row
           figure.col-9
-            +news-tabs(danhGiaSanPham)
+            h3.title.title--primary Đánh giá sản phẩm
+            //- +news-tabs(newsTabs)
 
-            .d-flex.flex-column.nano
+            .nano
               .nano-content
                 +news-piece()
                 +news-piece()
@@ -63,7 +72,11 @@ html
                 +news-piece()
                 +news-piece()
                 +news-piece()
-                +pagination('#', '#', '#', '#', '#')
+                +news-piece()
+                +news-piece()
+                +news-piece()
+            .d-flex.justify-content-end.mt-3
+              +pagination('#', '#', '#', '#', '#')
           
           aside.col-3
             +news-aside-type2(tinNhieuNguoiQuanTam)
@@ -74,7 +87,9 @@ html
         // Sản phẩm đã xem
         h3.title.title--primary Sản phẩm đã xem
         .row
-          .products-seen.owl-carousel.owl-theme
+          .products-seen.owl-carousel.owl-theme.col-12
+            +product-seen()
+            +product-seen()
             +product-seen()
             +product-seen()
             +product-seen()
@@ -86,7 +101,7 @@ html
         // Sản phẩm mới
         h3.title.title--primary Sản phẩm mới
         .row
-          .d-flex.justify-content-between
+          .d-flex.justify-content-between.col-12
             +product-card()
             +product-card()
             +product-card()
@@ -97,21 +112,34 @@ html
         // Từ khóa/Tags
         h3.title.title--primary Từ khóa/Tags
         .row
-          .d-flex.flex-wrap
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
-            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+          .d-flex.flex-wrap.mb-4.col-12
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
         
         
     +footer()

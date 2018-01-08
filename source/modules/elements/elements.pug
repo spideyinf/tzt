@@ -236,7 +236,7 @@ mixin tabs(data)
 //- Elements :: BS4 Pagination
 //-
 mixin pagination(...pages)
-  nav
+  nav&attributes(attributes)
     ul.pagination
       li.page-item
         a.page-link(href='#', aria-label='Previous')

@@ -81,5 +81,22 @@ $input-btn-padding-x-lg: 1rem;
 
 // Cards
 
-$card-border-radius:                8px;
-$card-inner-border-radius:          4px;
+$card-border-radius: 8px;
+$card-inner-border-radius: 4px;
+
+// Pagination
+
+$pagination-color: $primary-orange;
+$pagination-bg: $white !default;
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: rgba($primary-orange, 0.75);
+$pagination-hover-border-color: $gray-400;
+
+$pagination-active-color: $white !default;
+$pagination-active-bg: rgba($primary-orange, 0.75);
+$pagination-active-border-color: rgba($primary-orange, 0.75);
+
+$pagination-disabled-color: $gray-600 !default;
+$pagination-disabled-bg: $white !default;
+$pagination-disabled-border-color: $gray-300 !default;
