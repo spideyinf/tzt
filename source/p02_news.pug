@@ -1,0 +1,121 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+include modules/navbar/navbar
+include modules/cards/cards
+include modules/news/news
+
+-
+  var danhGiaSanPham = {
+    tabs: [
+      {href: '#news-1', id: 'news-1' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab1.png', thumb: 'news_tab_thumb1.png', active: true},
+      {href: '#news-2', id: 'news-2' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab2.png', thumb: 'news_tab_thumb2.png'},
+      {href: '#news-3', id: 'news-3' title: 'Lorem ipsum dolor sit amet', img: 'images/news_tab3.png', thumb: 'news_tab_thumb3.png'},
+    ]
+  };
+
+  var tinNhieuNguoiQuanTam = {
+    title: 'Tin nhiều người quan tâm',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var danhGiaSanPham = {
+    title: 'Đánh giá sản phẩm',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var giaCaThiTruong = {
+    title: 'Giá cả thị trường',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var meoVat = {
+    title: 'Mẹo vặt',
+    news: [1, 2, 3, 4, 5]
+  };
+
+doctype html
+html
+  +head(head.p02_news)
+
+  body
+    +header()
+    +navbar('Tin tức')
+    main.p02-news.tzt-background
+      .container
+
+        // Đánh giá sản phẩm
+        h3.title.title--primary Đánh giá sản phẩm
+        .row
+          figure.col-9
+            +news-tabs(danhGiaSanPham)
+
+            .d-flex.flex-column.nano
+              .nano-content
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +news-piece()
+                +pagination('#', '#', '#', '#', '#')
+          
+          aside.col-3
+            +news-aside-type2(tinNhieuNguoiQuanTam)
+            +news-aside-type2(danhGiaSanPham)
+            +news-aside-type2(giaCaThiTruong)
+            +news-aside-type2(meoVat)
+
+        // Sản phẩm đã xem
+        h3.title.title--primary Sản phẩm đã xem
+        .row
+          .products-seen.owl-carousel.owl-theme
+            +product-seen()
+            +product-seen()
+            +product-seen()
+            +product-seen()
+            +product-seen()
+            +product-seen()
+            +product-seen()
+
+        // Sản phẩm mới
+        h3.title.title--primary Sản phẩm mới
+        .row
+          .d-flex.justify-content-between
+            +product-card()
+            +product-card()
+            +product-card()
+            +product-card()
+            +product-card()
+            +product-card()
+        
+        // Từ khóa/Tags
+        h3.title.title--primary Từ khóa/Tags
+        .row
+          .d-flex.flex-wrap
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1
+        
+        
+    +footer()
+  // Gototop button
+  #js-gototop.btn--gototop
+    +ionicon('ion-chevron-up')
+  script(type='text/javascript', src='js/main.js')

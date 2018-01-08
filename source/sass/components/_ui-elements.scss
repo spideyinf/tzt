@@ -1,3 +1,9 @@
 .tzt-background {
   background-color: $primary-white;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

@@ -21,3 +21,14 @@ mixin product-card()
         span nơi bán
       +button('Tìm giá tốt', 'anchor').btn--solid
 
+mixin product-seen()
+  .card.tzt-product-card&attributes(attributes)
+    a(href='#')
+      img.card-img-top.tzt-product-card__img(src='http://via.placeholder.com/160x180')
+      h6.tzt-product-card__title.mb-2.px-2 Tên loại sản phẩm Lorem isprum
+      .text-center
+        p Từ
+          span.tzt-product-card__price.ml-1 125.000đ
+        p.my-1.font-color-gray100.font-size-12 Có
+          span 05
+          span nơi bán

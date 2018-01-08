@@ -229,3 +229,23 @@ mixin tabs(data)
   //- Tab panels
   .tab-content
     block
+
+
+
+//-
+//- Elements :: BS4 Pagination
+//-
+mixin pagination(...pages)
+  nav
+    ul.pagination
+      li.page-item
+        a.page-link(href='#', aria-label='Previous')
+          span(aria-hidden='true') &laquo;
+          span.sr-only Previous
+      each page, index in pages
+        li.page-item
+          a.page-link(href= page)= index + 1
+      li.page-item
+        a.page-link(href='#', aria-label='Next')
+          span(aria-hidden='true') &raquo;
+          span.sr-only Next

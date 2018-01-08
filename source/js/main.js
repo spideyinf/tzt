@@ -51,4 +51,20 @@ $(function() {
     autoplayHoverPause: true,
     items: 6
   });
+
+  (function goToTop() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() >= 200) {
+        $('#js-gototop').fadeIn();
+      } else {
+        $('#js-gototop').fadeOut();
+      }
+    });
+
+    $('#js-gototop').click(function() {
+      $('body, html').animate({ scrollTop: 0 }, 'normal');
+      $('main').animate({ scrollTop: 0 }, 'normal');
+      return !1;
+    });
+  })();
 });

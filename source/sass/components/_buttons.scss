@@ -65,12 +65,30 @@
     font-size: rem(18);
     align-self: center;
   }
+
+  &--gototop {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 10;
+    display: none;
+    border-radius: 50%;
+    color: $primary-white;
+    background-color: $primary-orange;
+    width: 58px;
+    height: 58px;
+
+    i {
+      font-size: 24px;
+    }
+  }
 }
 
 .owl-theme .owl-nav [class*='owl-'] {
   font-size: 0;
   color: $white;
-  background: rgba($primary-gray100, .75);
+  background: rgba($primary-gray100, 0.75);
   position: absolute;
   top: 40%;
   margin: 0;
@@ -91,7 +109,7 @@
   left: 0;
 
   &::before {
-    content: '\f3d2'
+    content: '\f3d2';
   }
 }
 

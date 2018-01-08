@@ -4,7 +4,10 @@
       "title": "Timzatot proj"
     },
     "p01_home": {
-      "title": "Timzatot"
+      "title": "Timzatot Trang chủ"
+    },
+    "p01_news": {
+      "title": "Timzatot Tin tức"
     }
   }
 }

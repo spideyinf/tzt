@@ -2,8 +2,12 @@
   "pageList": {
     "data": [
       {
-        "title": "Home",
+        "title": "Timzatot - Trang chủ",
         "url": "p01_home"
+      },
+      {
+        "title": "Timzatot - Tin tức",
+        "url": "p01_news"
       }
     ]
   }
