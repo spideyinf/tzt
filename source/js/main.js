@@ -3,8 +3,7 @@
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require owl.carousel/dist/owl.carousel.min.js
 
-$(function () {
-
+$(function() {
   'use strict';
 
   $('.hot-deals').owlCarousel({
@@ -13,7 +12,6 @@ $(function () {
     margin: 10,
     nav: true,
     dots: false,
-    // autoWidth: true,
     responsive: {
       0: {
         items: 1
@@ -53,4 +51,4 @@ $(function () {
     autoplayHoverPause: true,
     items: 6
   });
-})
+});
