@@ -8,6 +8,10 @@
       {
         "title": "Timzatot - Tin tức",
         "url": "p02_news"
+      },
+      {
+        "title": "Timzatot - Tin tức chi tiết",
+        "url": "p03_news-detail"
       }
     ]
   }

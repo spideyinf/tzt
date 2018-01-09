@@ -1,11 +1,8 @@
-.news-aside {
+.news-wrapper {
   background-color: $primary-silver;
   border-radius: 8px;
   padding: 16px;
-
-  &__img {
-    border-radius: 4px;
-  }
+  width: 100%;
 }
 
 .news-head {
@@ -38,5 +35,11 @@
       width: 100%;
       height: auto;
     }
+  }
+}
+
+.news-detail {
+  p {
+    line-height: 22px;
   }
 }

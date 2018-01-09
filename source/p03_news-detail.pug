@@ -1,0 +1,198 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+include modules/navbar/navbar
+include modules/cards/cards
+include modules/news/news
+
+-
+  var meVaBe = {
+    tabs: [
+      {href: '#goiy-me-be', title: 'Gợi ý cho bạn', active: true},
+      {href: '#sua', title: 'Sữa'},
+      {href: '#xeday', title: 'Xe đẩy'},
+      {href: '#thoitrangchobe', title: 'Thời trang cho bé'}
+    ]
+  };
+
+  var tinNhieuNguoiQuanTam = {
+    title: 'Tin nhiều người quan tâm',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var danhGiaSanPham = {
+    title: 'Đánh giá sản phẩm',
+    news: [1, 2, 3, 4]
+  };
+
+  var giaCaThiTruong = {
+    title: 'Giá cả thị trường',
+    news: [1, 2, 3, 4]
+  };
+
+  var meoVat = {
+    title: 'Mẹo vặt',
+    news: [1, 2, 3, 4]
+  };
+
+doctype html
+html
+  +head(head.p02_news)
+
+  body
+    +header()
+    +navbar('Tin tức')
+    main.tzt-background
+      .container
+
+        // Mẹo vặt news/detail
+        .row
+          figure.col-9
+            h3.title.title--primary Mẹo vặt
+
+            article.news-detail
+              header.title.title--upper Lorem ipsum dolor sit amet de anke
+              .font-color-gray200.mt-1
+                +ionicon('ion-android-calendar')
+                span 10-10-2010
+              p.news-detail__sub-head
+                i Are you considering buying a compatible inkjet cartridge for your printer? There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary
+              hr
+              section.news-detail__related
+                ul Các bài liên quan
+                  li
+                    a(href='#') Lorem ipsum dolor sit amet de anke 
+                  li
+                    a(href='#') Lorem ipsum dolor sit amet de anke
+                  li
+                    a(href='#') Lorem ipsum dolor sit amet de anke
+              section.news-detail__main
+                p Fact: Success is something of which we all want more.
+                  br
+                  | Fact: Most people believe that success is difficult.
+                  br
+                  | Fact: They’re wrong – it’s not!
+                  br
+                  | Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse when things don’t go their way! Pretty sad situation, to say the least.
+                  br
+                  | For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning and execution of those plans and belief that you can achieve your desires.
+                  br
+                  | The Truth About Success
+                  br
+                  | The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing to do with luck, coincidence or fate. It really comes down to understanding the steps in the process and then executing on those steps.
+                  br
+                  | There are basically six key areas to higher achievement. Some people will tell you there are four while others may tell you there are eight. One thing for certain though, is that irrespective of the number of steps the experts talk about, they all originate from the same roots.
+                .text-center.my-4
+                  img(src='https://via.placeholder.com/588x296').img-rounded
+                p Fact: Success is something of which we all want more.
+                  br
+                  | Fact: Most people believe that success is difficult.
+                  br
+                  | Fact: They’re wrong – it’s not!
+                  br
+                  | Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse when things don’t go their way! Pretty sad situation, to say the least.
+                  br
+                  | For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning and execution of those plans and belief that you can achieve your desires.
+                  br
+                  | The Truth About Success
+                  br
+                  | The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing to do with luck, coincidence or fate. It really comes down to understanding the steps in the process and then executing on those steps.
+                  br
+                  | There are basically six key areas to higher achievement. Some people will tell you there are four while others may tell you there are eight. One thing for certain though, is that irrespective of the number of steps the experts talk about, they all originate from the same roots.
+                  br
+                  | From my perspective then, here are the six key steps:
+                  br
+                  | 1. Making the decision
+                  br
+                  | 2. Clarity – developing the Vision
+                  br
+                  | 3. Focus – having a plan
+                  br
+                  | 4. Commitment – understanding the price and having the willingness to pay that price
+                  br
+                  | 5. Belief – believing in yourself and those around you
+                  br
+                  | 6. Taking action – practice Ready, Fire, Aim…
+
+              section.news-detail__comment.my-5
+                p Comment plugin goes here
+                
+            .row
+              .col-6
+                +news-aside-type2(danhGiaSanPham)
+              .col-6
+                +news-aside-type2(giaCaThiTruong)
+            
+            // Sản phẩm đã xem
+            h3.title.title--primary Sản phẩm đã xem
+            .row
+              .products-carousel4.owl-carousel.owl-theme.col-12
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+
+            // Sản phẩm mới
+            h3.title.title--primary Sản phẩm mới
+            .row
+              .products-carousel4.owl-carousel.owl-theme.col-12
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+            
+          aside.col-3
+            +news-aside-type2(tinNhieuNguoiQuanTam)
+            +news-aside-type2(danhGiaSanPham)
+            +news-aside-type2(giaCaThiTruong)
+            +news-aside-type2(meoVat)
+
+        // Từ khóa/Tags
+        h3.title.title--primary Từ khóa/Tags
+        .row
+          .d-flex.flex-wrap.mb-4.col-12
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+            +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
+
+    +footer()
+
+  // Gototop button
+  #js-gototop.btn--gototop
+    +ionicon('ion-chevron-up')
+
+  script(type='text/javascript', src='js/main.js')

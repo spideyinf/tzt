@@ -1,20 +1,20 @@
 mixin news-aside(data)
-  .news-aside
+  .news-wrapper&attributes(attributes)
     h5.title.title--orange= data.title
     ul
       each index in data.news
         li
           a(href='#').d-flex.my-3
-            img(src='http://via.placeholder.com/86x86').news-aside__img.mr-2
+            img(src='http://via.placeholder.com/86x86').img-rounded.mr-2
             p Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 
 
 mixin news-aside-type2(data)
   h5.title.title--orange.title--upper.my-3= data.title
-  ul.news-aside
+  ul.news-wrapper
     each index in data.news
       li
         a(href='#').d-flex.mb-3
-          img(src='http://via.placeholder.com/86x86').news-aside__img.mr-2
+          img(src='http://via.placeholder.com/86x86').img-rounded.mr-2
           p Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 
 
 mixin news-head()

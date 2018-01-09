@@ -52,12 +52,20 @@ $(function() {
     items: 6
   });
 
-  $('.products-seen').owlCarousel({
+  $('.products-carousel6').owlCarousel({
     loop: false,
     margin: 10,
     nav: false,
     dots: false,
     items: 6
+  });
+
+  $('.products-carousel4').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    dots: false,
+    items: 4
   });
 
   $('.nano').nanoScroller();

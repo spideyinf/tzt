@@ -15,15 +15,6 @@ include modules/news/news
     ]
   };
 
-  var meVaBe = {
-    tabs: [
-      {href: '#goiy-me-be', title: 'Gợi ý cho bạn', active: true},
-      {href: '#sua', title: 'Sữa'},
-      {href: '#xeday', title: 'Xe đẩy'},
-      {href: '#thoitrangchobe', title: 'Thời trang cho bé'}
-    ]
-  };
-
   var tinNhieuNguoiQuanTam = {
     title: 'Tin nhiều người quan tâm',
     news: [1, 2, 3, 4, 5]
@@ -87,7 +78,7 @@ html
         // Sản phẩm đã xem
         h3.title.title--primary Sản phẩm đã xem
         .row
-          .products-seen.owl-carousel.owl-theme.col-12
+          .products-carousel6.owl-carousel.owl-theme.col-12
             +product-seen()
             +product-seen()
             +product-seen()
@@ -140,10 +131,10 @@ html
             +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
             +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
             +button('Từ khóa', 'anchor').btn--tag.btn-sm.m-1
-        
-        
     +footer()
+
   // Gototop button
   #js-gototop.btn--gototop
     +ionicon('ion-chevron-up')
+
   script(type='text/javascript', src='js/main.js')
