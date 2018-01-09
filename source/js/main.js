@@ -69,6 +69,8 @@ $(function() {
   });
 
   $('.nano').nanoScroller();
+  $('.nano-pane').css('display', 'block');
+  $('.nano-slider').css('display', 'block');
 
   (function goToTop() {
     $(window).scroll(function() {

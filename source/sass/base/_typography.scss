@@ -10,12 +10,13 @@ p {
   &--primary {
     text-transform: uppercase;
     color: $primary-orange;
-    padding: 28px 0 16px;
+    padding: 16px 0;
     font-size: rem(24);
   }
 
   &--upper {
     text-transform: uppercase;
+    line-height: 1.6;
   }
 
   &--orange {
@@ -28,6 +29,10 @@ p {
 
   &--gray {
     color: $primary-gray100;
+  }
+
+  &--white {
+    color: $primary-white;
   }
 }
 

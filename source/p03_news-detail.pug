@@ -18,22 +18,22 @@ include modules/news/news
 
   var tinNhieuNguoiQuanTam = {
     title: 'Tin nhiều người quan tâm',
-    news: [1, 2, 3, 4, 5]
+    news: [1, 2, 3, 4, 5, 6]
   };
 
   var danhGiaSanPham = {
     title: 'Đánh giá sản phẩm',
-    news: [1, 2, 3, 4]
+    news: [1, 2, 3, 4, 5]
   };
 
   var giaCaThiTruong = {
     title: 'Giá cả thị trường',
-    news: [1, 2, 3, 4]
+    news: [1, 2, 3, 4, 5]
   };
 
   var meoVat = {
     title: 'Mẹo vặt',
-    news: [1, 2, 3, 4]
+    news: [1, 2, 3, 4, 5]
   };
 
 doctype html
@@ -52,21 +52,25 @@ html
             h3.title.title--primary Mẹo vặt
 
             article.news-detail
-              header.title.title--upper Lorem ipsum dolor sit amet de anke
-              .font-color-gray200.mt-1
+              header.title.title--upper.font-size-18 Lorem ipsum dolor sit amet de anke
+              .font-color-gray200.mt-1.mb-3
                 +ionicon('ion-android-calendar')
                 span 10-10-2010
               p.news-detail__sub-head
                 i Are you considering buying a compatible inkjet cartridge for your printer? There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary
+                  br
+                  | There is a significant portion of the population here in North America, that actually want and need success to be hard!
               hr
               section.news-detail__related
-                ul Các bài liên quan
+                p.title Các bài liên quan
+                ul
                   li
-                    a(href='#') Lorem ipsum dolor sit amet de anke 
+                    a(href='#') Lorem ipsum dolor sit amet de anke - dolor sit amet de anke
                   li
-                    a(href='#') Lorem ipsum dolor sit amet de anke
+                    a(href='#') Lorem ipsum dolor sit amet de anke - dolor sit amet de anke
                   li
-                    a(href='#') Lorem ipsum dolor sit amet de anke
+                    a(href='#') Lorem ipsum dolor sit amet de anke - dolor sit amet de anke
+              hr
               section.news-detail__main
                 p Fact: Success is something of which we all want more.
                   br
@@ -84,7 +88,7 @@ html
                   br
                   | There are basically six key areas to higher achievement. Some people will tell you there are four while others may tell you there are eight. One thing for certain though, is that irrespective of the number of steps the experts talk about, they all originate from the same roots.
                 .text-center.my-4
-                  img(src='https://via.placeholder.com/588x296').img-rounded
+                  img(src='https://via.placeholder.com/620x296').img-rounded
                 p Fact: Success is something of which we all want more.
                   br
                   | Fact: Most people believe that success is difficult.
@@ -116,12 +120,13 @@ html
                   | 6. Taking action – practice Ready, Fire, Aim…
 
               section.news-detail__comment.my-5
-                p Comment plugin goes here
+                p
+                  b Comment plugin goes here
                 
             .row
-              .col-6
+              .col-6.pr-2
                 +news-aside-type2(danhGiaSanPham)
-              .col-6
+              .col-6.pl-2
                 +news-aside-type2(giaCaThiTruong)
             
             // Sản phẩm đã xem
@@ -151,7 +156,7 @@ html
                 +product-card()
                 +product-card()
             
-          aside.col-3
+          aside.col-3.pl-0
             +news-aside-type2(tinNhieuNguoiQuanTam)
             +news-aside-type2(danhGiaSanPham)
             +news-aside-type2(giaCaThiTruong)

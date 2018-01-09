@@ -9,15 +9,15 @@ include modules/news/news
 -
   var newsTabs = {
     tabs: [
-      {href: '#news-1', id: 'news-1', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54', active: true},
-      {href: '#news-2', id: 'news-2', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54'},
-      {href: '#news-3', id: 'news-3', title: 'Lorem ipsum dolor sit amet', img: 'http://via.placeholder.com/540x240', thumb: 'http://via.placeholder.com/58x54'}
+      {href: '#news-1', id: 'news-1', title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', img: 'http://via.placeholder.com/540x223', thumb: 'http://via.placeholder.com/58x54', active: true},
+      {href: '#news-2', id: 'news-2', title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', img: 'http://via.placeholder.com/540x223', thumb: 'http://via.placeholder.com/58x54'},
+      {href: '#news-3', id: 'news-3', title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', img: 'http://via.placeholder.com/540x223', thumb: 'http://via.placeholder.com/58x54'}
     ]
   };
 
   var tinNhieuNguoiQuanTam = {
     title: 'Tin nhiều người quan tâm',
-    news: [1, 2, 3, 4, 5]
+    news: [1, 2, 3, 4, 5, 6]
   };
 
   var danhGiaSanPham = {
@@ -49,10 +49,13 @@ html
         .row
           figure.col-9
             h3.title.title--primary Đánh giá sản phẩm
-            //- +news-tabs(newsTabs)
+            +news-tabs(newsTabs)
 
             .nano
               .nano-content
+                +news-piece()
+                +news-piece()
+                +news-piece()
                 +news-piece()
                 +news-piece()
                 +news-piece()
@@ -92,7 +95,10 @@ html
         // Sản phẩm mới
         h3.title.title--primary Sản phẩm mới
         .row
-          .d-flex.justify-content-between.col-12
+          .products-carousel6.owl-carousel.owl-theme.col-12
+            +product-card()
+            +product-card()
+            +product-card()
             +product-card()
             +product-card()
             +product-card()
