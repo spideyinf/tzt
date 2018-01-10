@@ -1,7 +1,11 @@
 .p01-home {
   &__top-banner {
     width: 100%;
-    background: $secondary-gradient;
+
+    &__img {
+      width: 1200px;
+      height: 379px;
+    }
   }
 
   &__banner-slider {
@@ -12,6 +16,8 @@
     &__img {
       border-radius: 16px;
       padding: 8px;
+      width: 773px;
+      height: 206px;
     }
   }
 

@@ -1,11 +1,12 @@
 .tzt-hot-deal {
   padding: 9px 15px 32px;
   width: 200px;
-  height: auto;
+  height: 358px;
   background-color: $primary-white;
 
   &__title {
     color: $primary-black;
+    max-height: 63px;
   }
 
   &__img {
@@ -31,7 +32,7 @@
 .tzt-product-card {
   padding-bottom: 10px;
   width: 160px;
-  height: auto;
+  height: 318px;
   margin-bottom: 6px;
   background-color: $primary-white;
 
@@ -50,5 +51,18 @@
     font-size: rem(20);
     color: $primary-orange;
     font-weight: $font-weight-bold;
+  }
+}
+
+.tzt-coupon {
+  padding-bottom: 10px;
+  width: 172px;
+  height: 360px;
+  margin-bottom: 8px;
+  background-color: $primary-white;
+
+  &__img {
+    width: 171px;
+    height: 180px;
   }
 }

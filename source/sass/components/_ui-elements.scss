@@ -27,35 +27,15 @@
   height: 1800px;
 
   > .nano-pane {
-    background: $primary-orange;
-    width: 0.5rem;
+    background: $primary-silver;
+    width: 6px;
     top: 7px;
-    right: 7px;
-    border: 1px solid $primary-gray100;
-  }
+    right: 0;
+    border: 0;
 
-  > .nano-slider {
-    background: $primary-gray100;
-    width: 100%;
+    > .nano-slider {
+      background: $primary-orange;
+      width: 80%;
+    }
   }
 }
-
-// //
-// // Components :: Scrollbar
-// // --------------------------------------------------
-// .nano {
-//   > .nano-pane {
-//     width: 0.5rem;
-//     top: 7px;
-//     right: 7px;
-//     background: $white;
-//     border: 1px solid $primary-gray100;
-
-//     > .nano-slider {
-//       width: 100%;
-//       background: rgba($black, 0.4);
-//       border-radius: 5px;
-//       left: -1px;
-//     }
-//   }
-// }

@@ -12,6 +12,10 @@
       {
         "title": "Timzatot - Tin tức chi tiết",
         "url": "p03_news-detail"
+      },
+      {
+        "title": "Timzatot - Khuyến mại giảm giá",
+        "url": "p04_coupons"
       }
     ]
   }

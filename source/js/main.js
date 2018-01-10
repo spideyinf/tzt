@@ -2,9 +2,23 @@
 //=require popper.js/dist/umd/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require owl.carousel/dist/owl.carousel.min.js
+//=require nanoscroller/bin/javascripts/jquery.nanoscroller.js
 
 $(function() {
   'use strict';
+
+  $('.p01-home__top-banner').owlCarousel({
+    center: true,
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: false,
+    items: 1,
+    autoWidth: true,
+    autoplay: true,
+    autoplayTimeout: 4500,
+    autoplayHoverPause: true
+  });
 
   $('.hot-deals').owlCarousel({
     center: true,
@@ -69,8 +83,6 @@ $(function() {
   });
 
   $('.nano').nanoScroller();
-  $('.nano-pane').css('display', 'block');
-  $('.nano-slider').css('display', 'block');
 
   (function goToTop() {
     $(window).scroll(function() {

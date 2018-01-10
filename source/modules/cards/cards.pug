@@ -32,3 +32,12 @@ mixin product-seen()
         p.my-1.font-color-gray100.font-size-12 Có
           span 05
           span nơi bán
+
+mixin coupon()
+  .card.tzt-coupon&attributes(attributes)
+    img.card-img-top.tzt-coupon__img(src='http://via.placeholder.com/171x180')
+    h6.title.title--orange-dark.mb-2.px-2 Nội dung mã giảm giá Lorem isprum
+    .text-center
+      p.font-weight-bold Cách thức sử dụng: 
+      p.my-1.font-color-gray100.font-size-12 Áp dụng cho mua các sản phẩm Mẹ và Bé trước 31/12/2018
+      +button('Nhận mã giảm giá', 'anchor').btn--coupon

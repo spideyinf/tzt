@@ -1,0 +1,57 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+include modules/navbar/navbar
+include modules/cards/cards
+include modules/news/news
+
+-
+  var tinNhieuNguoiQuanTam = {
+    title: 'Tin nhiều người quan tâm',
+    news: [1, 2, 3, 4, 5, 6]
+  };
+
+doctype html
+html
+  +head(head.p04_coupons)
+
+  body
+    +header()
+    +navbar('Khuyến mại giảm giá')
+    main.tzt-background
+      .container
+
+        // Mẹo vặt news/detail
+        .row
+          figure.col-9
+            .d-flex.justify-content-between.flex-wrap
+              +coupon()
+              +coupon()
+              +coupon()
+              +coupon()
+              +coupon()
+            
+          aside.col-3.pl-0
+            +news-aside-type2(tinNhieuNguoiQuanTam)
+
+
+      // Sản phẩm mới
+      h3.title.title--primary Sản phẩm mới
+      .row
+        .products-carousel4.owl-carousel.owl-theme.col-12
+          +product-card()
+          +product-card()
+          +product-card()
+          +product-card()
+          +product-card()
+          +product-card()
+          +product-card()
+          +product-card()
+    +footer()
+
+  // Gototop button
+  #js-gototop.btn--gototop
+    +ionicon('ion-chevron-up')
+
+  script(type='text/javascript', src='js/main.js')

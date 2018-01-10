@@ -35,7 +35,7 @@ mixin news-head()
           
 mixin news-pre-head()
   .news-pre-head.d-flex
-    img(src='http://via.placeholder.com/358x224')
+    img(src='http://via.placeholder.com/358x224').news-pre-head__img
     .d-flex.flex-column.justify-content-center.ml-3
       .d-flex.mb-4
         +button('Đồ gia dụng', 'anchor').btn-sm.btn--tag.mr-2
@@ -68,7 +68,7 @@ mixin news-tabs(data)
 
 mixin news-piece()
   .d-flex.my-2
-    img(src='http://via.placeholder.com/262x158').img-rounded
+    img(src='http://via.placeholder.com/262x158').img-rounded.news-piece__img
     .d-flex.flex-column.justify-content-center.ml-3
       h5.title Lợi ích của các dòng sữa nội
       .font-color-gray200.mt-1
@@ -76,3 +76,20 @@ mixin news-piece()
         span 10-10-2010
       p.mt-3.font-color-gray200.text-justify There are many things that are important to catalog design. Your images must be sharp and appealing. Your text and even the font you use for the text is important...
       +button('...', 'anchor').btn--more.my-2
+
+mixin products-aside(data)
+  .products-wrapper&attributes(attributes)
+    h5.title.title--orange= data.title
+    ul
+      each index in data.products
+        li
+          a(href='#').d-flex.my-3
+            img(src='http://via.placeholder.com/107x115').img-rounded.mr-2
+            .d-flex.flex-column.justify-content-between
+              p.title Tên loại sản phẩm Lorem isprum #{index} Lorem ipsum dolor sit.
+              .mt-auto
+                p Từ
+                  span.tzt-product-card__price.ml-1 125.000đ
+                p.my-1.font-color-gray100.font-size-12 Có
+                  span 05
+                  span nơi bán

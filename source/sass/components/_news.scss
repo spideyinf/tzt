@@ -1,13 +1,23 @@
 .news-wrapper {
-  background-color: $primary-silver;
+  background-color: $primary-white;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
+
+  > li {
+    min-width: 86px;
+  }
 }
 
 .news-head {
   width: 100%;
   padding: 12px 28px 28px;
+
+  &__img {
+    border-radius: 4px;
+    width: 456px;
+    height: 295px;
+  }
 }
 
 .news-pre-head {
@@ -15,6 +25,11 @@
   border-radius: 4px;
   max-width: 950px;
   margin-bottom: 22px;
+
+  &__img {
+    width: 358px;
+    height: 224px;
+  }
 
   &__next {
     color: $primary-gray200;
@@ -34,8 +49,8 @@
     position: relative;
     border-radius: 4px;
     opacity: 0.75;
-    width: 100%;
-    height: auto;
+    width: 540px;
+    height: 228px;
   }
 
   &__caption {
@@ -73,5 +88,12 @@
     a {
       color: $primary-orange;
     }
+  }
+}
+
+.news-piece {
+  &__img {
+    width: 262px;
+    height: 158px;
   }
 }

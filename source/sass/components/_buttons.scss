@@ -11,6 +11,11 @@
     background: $primary-gradient;
   }
 
+  &--coupon {
+    color: $white;
+    background: $primary-orange-dark;
+  }
+
   &:focus {
     box-shadow: 0 0 0 0.2rem rgba($primary-orange, 0.25);
   }

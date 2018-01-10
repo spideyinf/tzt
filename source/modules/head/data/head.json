@@ -9,9 +9,11 @@
     "p02_news": {
       "title": "Timzatot Tin tức"
     },
-    
-    "p03_news-detail": {
+    "p03_news_detail": {
       "title": "Timzatot Tin tức chi tiết"
+    },
+    "p04_coupons": {
+      "title": "Timzatot Khuyến mãi giảm giá"
     }
   }
 }
