@@ -78,18 +78,17 @@ mixin news-piece()
       +button('...', 'anchor').btn--more.my-2
 
 mixin products-aside(data)
-  .products-wrapper&attributes(attributes)
-    h5.title.title--orange= data.title
-    ul
-      each index in data.products
-        li
-          a(href='#').d-flex.my-3
-            img(src='http://via.placeholder.com/107x115').img-rounded.mr-2
-            .d-flex.flex-column.justify-content-between
-              p.title Tên loại sản phẩm Lorem isprum #{index} Lorem ipsum dolor sit.
-              .mt-auto
-                p Từ
-                  span.tzt-product-card__price.ml-1 125.000đ
-                p.my-1.font-color-gray100.font-size-12 Có
-                  span 05
-                  span nơi bán
+  h5.title.title--orange.title--upper= data.title
+  ul
+    each index in data.products
+      li
+        a(href='#').d-flex.my-3.products-aside
+          img(src='http://via.placeholder.com/107x115').img-rounded.mr-2
+          .d-flex.flex-column.justify-content-between
+            p.mt-2 Tên loại sản phẩm Lorem isprum #{index} Lorem ipsum dolor sit.
+            .mt-auto.mb-2
+              p Từ
+                span.tzt-product-card__price.ml-1 125.000đ
+              p.my-1.font-color-gray100.font-size-12 Có
+                span 05
+                span nơi bán
