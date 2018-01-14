@@ -119,14 +119,16 @@ mixin radio(caption, id)
 //- Elements :: Form/Checkbox (From B4)
 //- @param {string} caption - caption displayed for radio
 //-
-mixin checkbox(caption)
-  label.custom-control.custom-checkbox
+mixin checkbox(caption, id)
+  .custom-control.custom-checkbox.m-2
     input(
       type='checkbox',
-      class='custom-control-input'
+      class='custom-control-input',
+      id= id
     )&attributes(attributes)
-    span.custom-control-indicator
-    span.custom-control-description= caption
+    label.custom-control-label(
+      for= id
+    )= caption
 
 
 
@@ -260,13 +262,11 @@ mixin pagination(...pages)
 mixin accordion(data)
   div(role='tablist')
     each ent in data
-      .card
-        .card-header(role='tab')
-          h6.mb-0.title
-            span
-              +ionicon('ion-arrow-right-b')
-            span 
-              a(data-toggle='collapse', href= ent.href, role='button').title= ent.title
+      h6.mb-0.title(role='tab')
+        span
+          +ionicon('ion-arrow-right-b').font-color-orange-dark
+        span 
+          a(data-toggle='collapse', href= ent.href, role='button').title.title--orange-dark.font-size-15= ent.title
       block
       div.collapse.show(role= 'tabpanel' id=ent.id)
         - blocks[ent.id]()

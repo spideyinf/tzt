@@ -44,18 +44,51 @@ html
             .side-wrapper.mt-2
               +accordion(locSanPham)
                 +set-block('noiBan')
-                  .card-body
+                  .my-2
                     +search('')(placeholder='Tìm kiếm nơi bán')
-
+                    .nano.nano--filter.my-2
+                      .nano-content
+                        +checkbox('Hà Nội (11230)', 'check1')(name='place-filter')
+                        +checkbox('Hồ Chí Minh (11230)', 'check2')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check3')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check4')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check5')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check6')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check7')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check8')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check9')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check10')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check11')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check12')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check13')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check14')(name='place-filter')
+                        +checkbox('Hà Nội (11230)', 'check15')(name='place-filter')
                 +set-block('cuaHang')
-                  .card-body
+                  .my-2
                     +search('')(placeholder='Tìm kiếm cửa hàng')
+                    .nano.nano--filter
+                      .nano-content
+                        +checkbox('Lazada (11230)', 'check16')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check17')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check18')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check19')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check20')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check21')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check22')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check23')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check24')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check25')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check26')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check27')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check28')(name='shop-filter')
+                        +checkbox('Lazada (11230)', 'check29')(name='shop-filter')
 
                 +set-block('giaSanPham')
-                  +radio('Dưới 1 triệu', 'radio1')(name='price-filter')
-                  +radio('Từ 1 triệu đến 5 triệu', 'radio1')(name='price-filter')
-                  +radio('Từ 5 triệu đến 10 triệu', 'radio2')(name='price-filter')
-                  +radio('Trên 10 triệu', 'radio3')(name='price-filter')
+                  .my-2
+                    +radio('Dưới 1 triệu', 'radio1')(name='price-filter')
+                    +radio('Từ 1 triệu đến 5 triệu', 'radio1')(name='price-filter')
+                    +radio('Từ 5 triệu đến 10 triệu', 'radio2')(name='price-filter')
+                    +radio('Trên 10 triệu', 'radio3')(name='price-filter')
 
             .d-flex.flex-column
               img(src='images/products_banner1.png').my-2
