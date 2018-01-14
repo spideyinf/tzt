@@ -16,9 +16,14 @@ include modules/news/news
     ]
   };
 
+  var tinMoiNhat = {
+    title: 'Tin mới nhất',
+    news: [1, 2, 3, 4, 5, 6]
+  };
+
   var tinNhieuNguoiQuanTam = {
     title: 'Tin nhiều người quan tâm',
-    news: [1, 2, 3, 4, 5, 6]
+    news: [1, 2, 3, 4, 5]
   };
 
   var danhGiaSanPham = {
@@ -33,6 +38,16 @@ include modules/news/news
 
   var meoVat = {
     title: 'Mẹo vặt',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var tinLienQuan = {
+    title: 'Tin Liên Quan',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var tinKhac = {
+    title: 'Tin Khác',
     news: [1, 2, 3, 4, 5]
   };
 
@@ -123,12 +138,12 @@ html
                 p
                   b Comment plugin goes here
 
-            // News    
+            // Related News    
             .row
               .col-6.pr-2
-                +news-aside-type2(danhGiaSanPham)
+                +news-aside-type2(tinLienQuan)
               .col-6.pl-2
-                +news-aside-type2(giaCaThiTruong)
+                +news-aside-type2(tinKhac)
             
             // Sản phẩm đã xem
             h3.title.title--primary Sản phẩm đã xem
@@ -156,8 +171,12 @@ html
                 +product-card()
                 +product-card()
                 +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
             
           aside.col-3.pl-0
+            +news-aside-type2(tinMoiNhat)
             +news-aside-type2(tinNhieuNguoiQuanTam)
             +news-aside-type2(danhGiaSanPham)
             +news-aside-type2(giaCaThiTruong)

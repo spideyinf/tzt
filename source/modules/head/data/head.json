@@ -17,6 +17,9 @@
     },
     "p05_products": {
       "title": "Timzatot Sản phẩm"
+    },
+    "p06_product-detail": {
+      "title": "Timzatot Sản phẩm chi tiết"
     }
   }
 }

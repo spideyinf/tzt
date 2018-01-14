@@ -20,6 +20,10 @@
       {
         "title": "Timzatot - Sản phẩm",
         "url": "p05_products"
+      },
+      {
+        "title": "Timzatot - Sản phẩm chi tiết",
+        "url": "p06_product-detail"
       }
     ]
   }

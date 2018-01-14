@@ -7,26 +7,96 @@ include modules/cards/cards
 include modules/news/news
 
 -
+  var tinMoiNhat = {
+    title: 'Tin mới nhất',
+    news: [1, 2, 3, 4, 5, 6]
+  };
+
   var tinNhieuNguoiQuanTam = {
     title: 'Tin nhiều người quan tâm',
-    news: [1, 2, 3, 4, 5, 6]
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var danhGiaSanPham = {
+    title: 'Đánh giá sản phẩm',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var giaCaThiTruong = {
+    title: 'Giá cả thị trường',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var meoVat = {
+    title: 'Mẹo vặt',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var tinLienQuan = {
+    title: 'Tin Liên Quan',
+    news: [1, 2, 3, 4, 5]
+  };
+
+  var tinKhac = {
+    title: 'Tin Khác',
+    news: [1, 2, 3, 4, 5]
   };
 
 doctype html
 html
-  //- +head(head.p05_product-detail)
+  +head(head.p06_product-detail)
 
   body
     +header()
-    +navbar('Khuyến mại giảm giá')
+    +navbar('Thông tin sản phẩm')
     main.tzt-background
       .container
-
-        // Mẹo vặt news/detail
         .row
           figure.col-9
-            
+
+            // Related News
+            .row
+              .col-6.pr-2
+                +news-aside-type2(tinLienQuan)
+              .col-6.pl-2
+                +news-aside-type2(tinKhac)
+
+            // Sản phẩm đã xem
+            h3.title.title--primary Sản phẩm đã xem
+            .row
+              .products-carousel4.owl-carousel.owl-theme.col-12
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+                +product-seen()
+
+            // Sản phẩm mới
+            h3.title.title--primary Sản phẩm mới
+            .row
+              .products-carousel4.owl-carousel.owl-theme.col-12
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+                +product-card()
+
           aside.col-3.pl-0
+            +news-aside-type2(tinMoiNhat)
+            +news-aside-type2(tinNhieuNguoiQuanTam)
+            +news-aside-type2(danhGiaSanPham)
+            +news-aside-type2(giaCaThiTruong)
+            +news-aside-type2(meoVat)
 
 
     +footer()
