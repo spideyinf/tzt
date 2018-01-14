@@ -102,14 +102,16 @@ mixin selectbox(defaultValue, ...items)
 //- Elements :: Form/Radio (From B4)
 //- @param {string} caption - caption displayed for radio
 //-
-mixin radio(caption)
-  label.custom-control.custom-radio
+mixin radio(caption, id)
+  .custom-control.custom-radio.m-2
     input(
       type='radio',
-      class='custom-control-input'
+      class='custom-control-input',
+      id= id
     )&attributes(attributes)
-    span.custom-control-indicator
-    span.custom-control-description= caption
+    label.custom-control-label(
+      for= id
+    )= caption
 
 
 
@@ -212,7 +214,7 @@ mixin search()
   .input-group.search
     .input-group-prepend
       +ionicon('ion-ios-search-strong').search__icon
-    input(type='text' class='form-control' placeholder='Tìm kiếm sản phẩm bạn muốn so sánh giá' aria-label='')
+    input(type='text' class='form-control' aria-label='')&attributes(attributes)
 
 
 
@@ -249,3 +251,22 @@ mixin pagination(...pages)
         a.page-link(href='#', aria-label='Next')
           span(aria-hidden='true') &raquo;
           span.sr-only Next
+
+
+
+//-
+//- Elements ::  Accordion
+//-
+mixin accordion(data)
+  div(role='tablist')
+    each ent in data
+      .card
+        .card-header(role='tab')
+          h6.mb-0.title
+            span
+              +ionicon('ion-arrow-right-b')
+            span 
+              a(data-toggle='collapse', href= ent.href, role='button').title= ent.title
+      block
+      div.collapse.show(role= 'tabpanel' id=ent.id)
+        - blocks[ent.id]()

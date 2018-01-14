@@ -63,14 +63,14 @@
     height: 130px;
     margin-top: 8px;
   }
+}
 
-  &__filter {
-    color: $primary-orange;
-    border-color: $primary-orange;
-    max-width: 130px;
-    background-color: transparent;
-    background: url('../images/icon_caret_down.png') no-repeat right 0.5rem
-      center;
-    height: 30px;
-  }
+.tzt-filter {
+  color: $primary-orange;
+  border-color: $primary-orange;
+  max-width: 160px;
+  width: auto;
+  background-color: transparent;
+  background: url('../images/icon_caret_down.png') no-repeat right 0.5rem center;
+  height: 30px;
 }

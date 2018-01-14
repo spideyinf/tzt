@@ -53,6 +53,9 @@ $colors: (
     gray-dark: $gray-800
   )
   !default;
+
+$primary: $primary-orange;
+$secondary: $primary-gray200;
 // Font size
 $font-size-base: rem(14);
 
