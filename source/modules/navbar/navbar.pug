@@ -1,10 +1,118 @@
 mixin navbar(activeLink)
   .tzt-navbar
    ul.container.d-flex
-    li.tzt-navbar__item(class= activeLink === 'Danh mục sản phẩm' ? 'tzt-navbar__item--active' : '')
-      a.tzt-navbar__link(href='#')
+    li.tzt-navbar__item.dropdown(class= activeLink === 'Danh mục sản phẩm' ? 'tzt-navbar__item--active' : '')
+      a.tzt-navbar__link.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
         +ionicon('ion-android-menu').mx-2
         span Danh mục sản phẩm
+
+      ul.dropdown-menu
+        li
+        a.dropdown-item.dropdown-toggle(href='#') Mẹ và bé
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sữa
+          li
+            a.dropdown-item(href='#') Xe đẩy
+          li
+            a.dropdown-item(href='#') Bỉm
+        li
+        a.dropdown-item.dropdown-toggle(href='#') Thiết bị gia dụng
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Điện thoại - Máy tính bảng
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Máy tính- thiết bị văn phòng
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Thời trang
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Điện lạnh
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Điện gia dụng
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Mỹ phẩm
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+        a.dropdown-item.dropdown-toggle(href='#') Làm đẹp- Sức khỏe
+        ul.dropdown-menu
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
+          li
+            a.dropdown-item(href='#') Sản phẩm
     li.tzt-navbar__item(class= activeLink === 'Trang chủ' ? 'tzt-navbar__item--active' : '')
       a.tzt-navbar__link(href='#')
         span Trang chủ

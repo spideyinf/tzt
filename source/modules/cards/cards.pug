@@ -41,3 +41,37 @@ mixin coupon()
       p.font-weight-bold Cách thức sử dụng: 
       p.my-1.font-color-gray100.font-size-12 Áp dụng cho mua các sản phẩm Mẹ và Bé trước 31/12/2018
       +button('Nhận mã giảm giá', 'anchor').btn--coupon.mt-3
+
+mixin product-shop()
+  .card.product-shop&attributes(attributes)
+    img.card-img-top.product-shop__img(src='http://via.placeholder.com/143x92')
+    .text-center
+      .rateit.my-1(data-rateit-value='3.5' data-rateit-ispreset='true' data-rateit-readonly='true')
+      p.my-1.font-color-gray100.font-size-12 Có
+        span 05
+        span Nhận xét
+      p.title.title--orange-dark.font-size-20 123.000đ
+      +button('Đến nơi bán').mt-1
+
+mixin product-detail()
+  .product-detail__row.d-flex.justify-content-between.align-items-center
+    .product-detail__img
+      img(src='https://via.placeholder.com/92x58')
+    .d-flex.flex-column.align-items-center
+      .rateit(data-rateit-value='3.5' data-rateit-ispreset='true' data-rateit-readonly='true')
+      h5.title mama.vn
+    .d-flex.flex-column
+      h5.title Lorem Iprum de latos sepurem ilo
+      p.my-1 #12345
+      p Nơi bán:
+        span
+          a(href='#') Hà Nội,
+        span
+          a(href='#') Hồ Chí Minh
+    .d-flex.flex-column
+      h5.title.title--orange-dark 123.000đ
+      p.font-color-gray100.mt-1 Đã có VAT
+    +button('ĐẾN NƠI BÁN')
+  .row.d-flex.justify-content-center.align-items-center.mt-2
+    .col-4.p-0
+      block

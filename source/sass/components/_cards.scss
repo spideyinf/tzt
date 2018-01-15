@@ -66,3 +66,16 @@
     height: 180px;
   }
 }
+
+.product-shop {
+  width: 143px;
+  height: 208px;
+  background-color: transparent;
+  border: 0;
+
+  &__img {
+    width: 141px;
+    height: 92px;
+    border-radius: 4px;
+  }
+}

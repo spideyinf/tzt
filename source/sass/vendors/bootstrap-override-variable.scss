@@ -83,12 +83,10 @@ $input-btn-padding-y-lg: rem(8);
 $input-btn-padding-x-lg: 1rem;
 
 // Cards
-
 $card-border-radius: 8px;
 $card-inner-border-radius: 4px;
 
 // Pagination
-
 $pagination-color: $primary-orange;
 $pagination-bg: $white !default;
 
@@ -103,3 +101,14 @@ $pagination-active-border-color: rgba($primary-orange, 0.75);
 $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $white !default;
 $pagination-disabled-border-color: $gray-300 !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y: 1rem;
+$breadcrumb-padding-x: 1.25rem;
+
+$breadcrumb-margin-bottom: 0;
+
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $primary-orange;
+$breadcrumb-active-color: $primary-gray200;
+$breadcrumb-divider: '>';

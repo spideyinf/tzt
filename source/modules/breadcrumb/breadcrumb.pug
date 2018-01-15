@@ -2,7 +2,7 @@ mixin breadcrumb(...items)
   ol.breadcrumb
     each item, index in items
       if index+1 === items.length
-        li.active=item
+        li.breadcrumb-item.active=item
       else
-        li
+        li.breadcrumb-item
           a(href='#')=item

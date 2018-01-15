@@ -7,10 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "scss-lint ."
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@zeitiger/elevatezoom": "^2.5.4",
     "bootstrap": "^4.0.0-beta.3",
     "browser-sync": "^2.14.0",
     "del": "^2.2.2",
@@ -42,6 +45,7 @@
     "install": "^0.8.1",
     "ionicons": "2.0.1",
     "jquery": "^3.2.1",
+    "jquery.rateit": "^1.1.1",
     "jshint": "^2.9.2",
     "nanoscroller": "^0.8.7",
     "npm": "^3.10.6",

@@ -2,6 +2,7 @@
   color: $primary-orange;
   border: 1px solid $primary-orange;
   font-size: rem(15);
+  background: transparent;
 
   &:hover,
   &:active,
@@ -97,6 +98,18 @@
       position: absolute;
       top: 30%;
       left: 30%;
+    }
+  }
+
+  &--blue {
+    color: #539fcf;
+    border: 1px solid #539fcf;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #539fcf;
+      box-shadow: none;
     }
   }
 }

@@ -5,8 +5,17 @@ include modules/elements/elements
 include modules/navbar/navbar
 include modules/cards/cards
 include modules/news/news
+include modules/breadcrumb/breadcrumb
 
 -
+  var productDetailTabs = {
+    tabs: [
+      {href: '#soSanhGia', title: 'So sánh giá', active: true},
+      {href: '#thongTinSanPham', title: 'Thông tin sản phẩm'},
+      {href: '#lichSuGia', title: 'Lịch sử giá'},
+    ]
+  };
+
   var tinMoiNhat = {
     title: 'Tin mới nhất',
     news: [1, 2, 3, 4, 5, 6]
@@ -42,6 +51,7 @@ include modules/news/news
     news: [1, 2, 3, 4, 5]
   };
 
+
 doctype html
 html
   +head(head.p06_product-detail)
@@ -53,6 +63,90 @@ html
       .container
         .row
           figure.col-9
+            .row
+              .col-12
+                +breadcrumb('Mẹ và bé', 'Sản phẩm lorem ispum de lato')
+
+            .row
+              // Vertical Slider with Image preview
+              .col-4.pr-0.d-flex.justify-content-between.w-100
+                div(id='gallery').slider
+                  a(href='#' data-image='http://via.placeholder.com/198x214' data-zoom-image='http://via.placeholder.com/500x500')
+                    img(id='img_01' src='http://via.placeholder.com/72x72')
+                  a(href='#' data-image='http://via.placeholder.com/198x214' data-zoom-image='http://via.placeholder.com/500x500')
+                    img(id='img_01' src='http://via.placeholder.com/72x72')
+                  a(href='#' data-image='http://via.placeholder.com/198x214' data-zoom-image='http://via.placeholder.com/500x500')
+                    img(id='img_01' src='http://via.placeholder.com/72x72')
+                  a(href='#' data-image='http://via.placeholder.com/198x214' data-zoom-image='http://via.placeholder.com/500x500')
+                    img(id='img_01' src='http://via.placeholder.com/72x72')
+                .d-flex.flex-column
+                  img(id='zoom_01' src='http://via.placeholder.com/198x214' data-zoom-image='http://via.placeholder.com/500x500')
+
+                  +button('+ NHẬN THÔNG BÁO GIÁ TỐT', 'anchor').btn--blue.btn-sm.mt-3
+
+
+              // Featured Shop
+              .col-8
+                .d-flex.justify-content-around
+                  +product-shop()
+                  +product-shop()
+                  +product-shop()
+
+                .d-flex.justify-content-center.my-3.product-desc
+                  ul.line-18
+                    li - Thiết kế V cut
+                    li - Sợi nano siêu bền và nhẹ
+                    li - Bề mặt rãnh thấm
+
+            .row
+              .col-12
+                +tabs(productDetailTabs).tzt-tabs
+
+                  block soSanhGia
+                    .tab-pane.fade.mt-3.show.active(role='tabpanel' id='soSanhGia')
+                      .d-flex.align-items-center.my-3.w-100
+                        p.font-color-gray200.mr-3 Sắp xếp theo
+                        +selectbox('Mới nhất', 'Giá cao đến thấp', 'Giá thấp đến cao').tzt-filter
+                        p.font-color-gray200.ml-auto.mr-3 Hiển thị
+                        +selectbox('20', '30', '40').tzt-filter
+                      hr
+                      +product-detail()
+                      hr
+                      +product-detail()
+                      hr
+                      +product-detail()
+                      hr
+                      +product-detail()
+                        block seeMore1
+                          .collapse(id='collapse1')
+                            hr
+                            a(href='#') Lorem Iprum de latos sepurem ilo arto selo - #241241
+                            hr
+                            a(href='#') Lorem Iprum de latos sepurem ilo arto selo - #241241
+                            hr
+
+                          +button('Xem thêm sản phẩm cùng nơi bán >').btn--tag.see-more(data-toggle='collapse' data-target='#collapse1')
+                      hr
+                      +product-detail()
+                        block seeMore2
+                          .collapse(id='collapse2')
+                            hr
+                            a(href='#') Lorem Iprum de latos sepurem ilo arto selo - #241241
+                            hr
+                            a(href='#') Lorem Iprum de latos sepurem ilo arto selo - #241241
+                            hr
+                            a(href='#') Lorem Iprum de latos sepurem ilo arto selo - #241241
+                            hr
+
+                          +button('Xem thêm sản phẩm cùng nơi bán >').btn--tag.see-more(data-toggle='collapse' data-target='#collapse2')
+                      hr
+                  block thongTinSanPham
+                    .tab-pane.fade.mt-3(role='tabpanel' id='thongTinSanPham')
+                      p Info goes here
+
+                  block lichSuGia
+                    .tab-pane.fade.mt-3(role='tabpanel' id='lichSuGia')
+                      p Price chart goes here
 
             // Related News
             .row
