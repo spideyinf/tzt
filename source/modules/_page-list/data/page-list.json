@@ -25,6 +25,10 @@
         "title": "Timzatot - Sản phẩm chi tiết",
         "url": "p06_product-detail"
       }
+      {
+        "title": "Timzatot - MOBILE - Trang chủ",
+        "url": "s01_home"
+      }
     ]
   }
 }
