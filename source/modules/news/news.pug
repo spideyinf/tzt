@@ -92,3 +92,11 @@ mixin products-aside(data)
               p.my-1.font-color-gray100.font-size-12 Có
                 span 05
                 span nơi bán
+
+mixin news-sp(data)
+  ul.news-wrapper.news-wrapper--sp
+    each index in data.news
+      li
+        a(href='#').d-flex.mb-3
+          img(src='http://via.placeholder.com/86x86').img-rounded.mr-2
+          h6.title.font-size-14 Tiêu đề tin tức #{index} Lorem ipsum dolor sit. 

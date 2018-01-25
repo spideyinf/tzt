@@ -58,18 +58,31 @@
     background: $secondary-gradient;
     color: $white;
     height: 38px;
+
+    @include respond-to(phone-and-down) {
+      height: 26px;
+      padding: 0.25rem 0.4rem;
+    }
   }
 
   &__contact-icon {
-    font-size: rem(48);
+    font-size: 48px;
     margin-right: 8px;
     align-self: center;
+
+    @include respond-to(phone-and-down) {
+      font-size: 32px;
+    }
   }
 
   &__contact-text {
     color: $white;
     font-size: rem(18);
     align-self: center;
+
+    @include respond-to(phone-and-down) {
+      font-size: 15px;
+    }
   }
 
   &--more {

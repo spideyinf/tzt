@@ -33,3 +33,28 @@ mixin footer()
                 +ionicon('ion-email').font-size-20.mr-2
               span support@timzatot.vn
 
+mixin footer-sp()
+  footer.footer.footer--sp&attributes(attributes)
+    p.font-color-gray100.text-justify.my-2 <b>Timzatot.com</b> là chuyên trang so sánh giá và review sản phẩm. Bằng công nghệ search tối ưu, chúng tôi giúp bạn tìm được giá bán tốt nhất từ 25,000+ website bán hàng online, bao gồm các thương hiệu uy tín như: Lazada, tiki, adayroi, dienmayxanh,…
+    .d-flex.justify-content-between.align-items-center
+      img(src='images/tzt_logo.png').footer__logo
+      a.btn.btn--contact.btn-sm.d-flex(href="#")
+        +ionicon('ion-arrow-graph-up-right').btn__contact-icon
+        p.btn__contact-text
+          span.font-weight-bold Hợp tác
+          span với
+          span.font-weight-bold Timzatot.vn
+    .d-flex.justify-content-between.align-items-center.mt-2
+      .div
+        p.font-color-gray100 Công ty TNHH ABC
+        p.font-color-gray100 123 Hoàng Cầu
+        p.font-color-gray100 Hai Bà Trưng - Hà Nội
+      .div
+        p.font-color-gray100.d-flex.align-items-center
+          span
+            +ionicon('ion-ios-telephone').font-size-20.mr-2
+          span 0900.000.000
+        p.font-color-gray100.d-flex.align-items-center
+          span
+            +ionicon('ion-email').font-size-20.mr-2
+          span support@timzatot.vn

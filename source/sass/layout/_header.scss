@@ -7,6 +7,10 @@
   &__sub-title {
     color: $primary-silver;
     font-size: 20px;
+
+    @include respond-to(phone-and-down) {
+      font-size: 12px;
+    }
   }
 
   &__logo {
@@ -19,6 +23,15 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+
+      @include respond-to(phone-and-down) {
+        width: 98px;
+        height: 32px;
+      }
     }
+  }
+
+  &--sp {
+    padding: 10px;
   }
 }

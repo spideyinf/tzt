@@ -75,3 +75,35 @@ mixin product-detail()
   .row.d-flex.justify-content-center.align-items-center.mt-2
     .col-4.p-0
       block
+
+//- SP
+mixin hot-deal-sp()
+  a.card.tzt-hot-deal.tzt-hot-deal--sp&attributes(attributes)(href='#')
+    h5.tzt-hot-deal__title.font-size-12.mb-1 Tên sản phẩm Lorem isprum de lotos apirin...
+    img.card-img-top.tzt-hot-deal__img(src= 'http://via.placeholder.com/150x86')
+    .d-flex.justify-content-between.mt-1
+      p.tzt-hot-deal__saving.d-flex
+        +ionicon('ion-arrow-down-c')
+        span 25%
+      .div
+        p.tzt-hot-deal__old-price 209.000đ
+        p.title.font-size-14 180.000đ
+
+mixin product-card-sp()
+  a.card.tzt-product-card(href='#')
+    img.card-img-top.tzt-product-card__img(src='http://via.placeholder.com/168x110')
+    h6.tzt-product-card__title.px-2 Tên loại sản phẩm Lorem isprum
+    .text-center
+      p Từ
+        span.tzt-product-card__price.ml-1 125.000đ
+      p.my-1.font-color-gray100.font-size-12 Có
+        span 05
+        span nơi bán
+
+mixin coupon-sp()
+  .d-flex.tzt-coupon-sp&attributes(attributes)
+    img.tzt-coupon-sp__img(src='http://via.placeholder.com/110x88')
+    .d-flex.flex-column.ml-2
+      h6.title Nội dung mã giảm giá Lorem isprum
+      p.my-1.font-color-gray100.font-size-12 Áp dụng cho mua các sản phẩm Mẹ và Bé trước 31/12/2018
+      +button('Nhận ngay', 'anchor').btn--coupon.btn-sm.mt-auto.mx-5
