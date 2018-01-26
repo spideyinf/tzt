@@ -61,7 +61,7 @@
 
     @include respond-to(phone-and-down) {
       height: 26px;
-      padding: 0.25rem 0.4rem;
+      padding: 0.25rem 0.65rem;
     }
   }
 
@@ -124,6 +124,14 @@
       background: #539fcf;
       box-shadow: none;
     }
+  }
+
+  &--hamburger {
+    padding: 3px 20px;
+  }
+
+  &--translateY {
+    transform: translateY(-18px);
   }
 }
 

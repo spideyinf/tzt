@@ -13,7 +13,7 @@ include modules/news/news
 
 doctype html
 html
-  +head(head.p01_home)
+  +head(head.s01_home)
 
   body
     +header-sp()
@@ -26,10 +26,8 @@ html
         +hot-deal-sp()
         +hot-deal-sp()
         +hot-deal-sp()
-      .text-center.my-3
-        +button('Xem thêm', 'anchor').btn--solid
-      .banner-sp
-        img(src='images/banner_sp1.png')
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
       
       h3.title.title--primary.text-center Mẹ và bé
       .d-flex.justify-content-between.flex-wrap.u-ml10
@@ -39,12 +37,8 @@ html
         +product-card-sp()
         +product-card-sp()
         +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-      .text-center.my-3
-        +button('Xem thêm', 'anchor').btn--solid
-      .banner-sp
-        img(src='images/banner_sp1.png')
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
       h3.title.title--primary.text-center Đồ gia dụng
       .d-flex.justify-content-between.flex-wrap.u-ml10
@@ -54,30 +48,23 @@ html
         +product-card-sp()
         +product-card-sp()
         +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-      .text-center.my-3
-        +button('Xem thêm', 'anchor').btn--solid
-      .banner-sp
-        img(src='images/banner_sp1.png')
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
       
       h3.title.title--primary.text-center Deal tốt trong ngày
       .d-flex.flex-column
         +coupon-sp()
         +coupon-sp()
         +coupon-sp()
-        +coupon-sp()
       hr.mt-0
-      .text-center.my-3
-        +button('Xem thêm', 'anchor').btn--solid
-      .banner-sp
-        img(src='images/banner_sp1.png')
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
       h3.title.title--primary.text-center Thông tin sản phẩm
       +news-sp(thongTinSanPham)
-      .text-center.my-3
-        +button('Xem thêm', 'anchor').btn--solid
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
-    +footer-sp()
+    +footer-sp().mt-5
     
   script(type='text/javascript', src='js/main.js')

@@ -28,6 +28,14 @@
       {
         "title": "Timzatot - MOBILE - Trang chủ",
         "url": "s01_home"
+      },
+      {
+        "title": "Timzatot - MOBILE - Tin tức",
+        "url": "s02_news"
+      },
+      {
+        "title": "Timzatot - MOBILE - Tin tức chi tiết",
+        "url": "s03_news-detail"
       }
     ]
   }

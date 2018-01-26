@@ -7,7 +7,7 @@
   @include respond-to(phone-and-down) {
     padding: 8px;
     flex: 1 1 128px;
-    height: 162px;
+    height: 168px;
     margin: 0 10px 10px 0;
   }
 
@@ -41,7 +41,7 @@
     color: $primary-gray200;
 
     @include respond-to(phone-and-down) {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 
@@ -51,7 +51,7 @@
     font-weight: $font-weight-bold;
 
     @include respond-to(phone-and-down) {
-      font-size: 18px;
+      font-size: 19px;
     }
   }
 }

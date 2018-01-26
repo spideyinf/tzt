@@ -21,5 +21,6 @@ mixin header-sp()
         h1.header__title.font-weight-bold Chuyên trang thương mại điện tử
         h2.header__sub-title So sánh giá và review thông tin sản phẩm
     .d-flex.justify-content-between.align-items-center
-      +button('', 'anchor', 'ion-android-menu').mr-3
+      button.btn.btn--hamburger.mr-3
+        +ionicon('ion-android-menu').font-size-20
       +search-sp()(placeholder='Tìm kiếm sản phẩm so sánh giá')

@@ -20,6 +20,15 @@
     },
     "p06_product-detail": {
       "title": "Timzatot Sản phẩm chi tiết"
+    },
+    "s01_home": {
+      "title": "Timzatot Trang chủ"
+    },
+    "s02_news": {
+      "title": "Timzatot Tin tức"
+    },
+    "s03_news-detail": {
+      "title": "Timzatot Tin tức chi tiết"
     }
   }
 }
