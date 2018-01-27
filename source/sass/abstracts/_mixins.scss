@@ -7,7 +7,7 @@
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 $breakpoints: (
-  smallphone-and-down: '(max-width: 480px)',
+  smallphone-and-down: '(max-width: 320px)',
   phone-and-down: '(max-width: 576px)',
   tablet-and-down: '(max-width: 991px)',
   desktop-and-down: '(max-width: 1199px)',

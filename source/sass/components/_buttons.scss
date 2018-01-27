@@ -15,6 +15,11 @@
   &--coupon {
     color: $white;
     background: $primary-orange-dark;
+
+    @include respond-to(phone-and-down) {
+      align-self: center;
+      padding: 5px 22px;
+    }
   }
 
   &:focus {
@@ -129,7 +134,8 @@
   }
 
   &--hamburger {
-    padding: 3px 20px;
+    padding: 3px 22px;
+    align-self: start;
   }
 
   &--translateY {
