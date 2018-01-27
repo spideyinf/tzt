@@ -8,8 +8,8 @@
     height: 58px;
 
     @include respond-to(phone-and-down) {
-      width: 98px;
-      height: 32px;
+      width: 102px;
+      height: auto;
     }
   }
 

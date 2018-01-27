@@ -60,7 +60,8 @@
     height: 38px;
 
     @include respond-to(phone-and-down) {
-      height: 26px;
+      max-height: 28px;
+      max-width: 202px;
       padding: 0.25rem 0.65rem;
     }
   }
@@ -72,6 +73,7 @@
 
     @include respond-to(phone-and-down) {
       font-size: 32px;
+      margin-right: 4px;
     }
   }
 
