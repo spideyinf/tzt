@@ -8,12 +8,6 @@
     min-width: 86px;
   }
 
-  &__img {
-    max-width: 100%;
-    width: 86px;
-    height: 68px;
-  }
-
   &--sp {
     border-radius: 4px;
     padding: 10px 20px;
@@ -120,4 +114,19 @@
   border-radius: 8px;
   padding: 16px 12px;
   width: 100%;
+}
+
+.news-sp {
+  padding-top: 16px;
+
+  &__img {
+    flex: 0 0 86px;
+    height: 68px;
+  }
+
+  &__article {
+    margin-top: 4px;
+    max-height: 36px;
+    overflow-y: hidden;
+  }
 }

@@ -94,10 +94,16 @@ mixin products-aside(data)
                 span nơi bán
 
 mixin news-sp(data)
-  ul.news-wrapper.news-wrapper--sp
+  ul.news-wrapper.news-sp
     each index in data.news
       li
-        a(href='#').d-flex.mb-3
-          .d-flex.justify-content-center.align-items-center.w-100
-            img(src='images/sp_img5.png').news-wrapper__img.img-rounded.mr-2
-          p.font-size-14 Tin tức #{index} Giá sữa tắm Chico bao nhiêu? Sữa tắm hương hoa Cúc có tốt cho da bé nhạy cảm không?
+        a(href='#').d-flex.mb-3.mx-3
+          .d-flex.justify-content-center.align-items-center.mr-2
+            img(src='images/sp_img5.png').news-sp__img.img-rounded
+          .d-flex.flex-column
+            h2.title.font-size-14 Tin tức #{index} Giá sữa tắm Chico bao nhiêu? 
+            p.news-sp__article Sữa tắm hương hoa Cúc có tốt cho da bé nhạy cảm không?
+              <br>
+              | Sữa nào tốt nhất cho da bé?
+              <br>
+              | Sữa nào tốt nhì cho da bé?

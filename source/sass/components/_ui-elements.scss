@@ -189,3 +189,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.breadcrumb {
+  @include respond-to(phone-and-down) {
+    padding: 10px 16px 0;
+  }
+
+  &-item {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

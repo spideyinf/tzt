@@ -1,0 +1,83 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+include modules/navbar/navbar
+include modules/cards/cards
+include modules/news/news
+-
+  var news = {
+    news: [1, 2, 3, 4, 5, 6]
+  };
+
+  var subNews = {
+    news: [1, 2, 3]
+  };
+
+doctype html
+html
+  +head(head.s04_products)
+
+  body
+    +header-sp()
+    main.main-sp
+      h3.title.title--primary.text-center Điện thoại - Máy tính bảng
+      .d-flex.justify-content-between.flex-wrap.ml-2
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+
+      h3.title.title--primary.text-center Nhiều người quan tâm
+      .d-flex.flex-wrap.mx-3
+        +button('Từ khóa dài ', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa ngắn', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa thân quen', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa không quen', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+        +button('Từ khóa', 'anchor').btn--tag.btn-sm.mr-1.mb-1
+      
+      h3.title.title--primary.text-center Tin tức liên quan
+      +news-sp(news)
+      .text-center.btn--translateY
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+      
+      h3.title.title--primary.text-center Tin mới
+      +news-sp(subNews)
+      .text-center.btn--translateY
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+      
+      h3.title.title--primary.text-center Đánh giá sản phẩm
+      +news-sp(subNews)
+      .text-center.btn--translateY
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        
+      h3.title.title--primary.text-center Mẹo vặt
+      +news-sp(subNews)
+      .text-center.btn--translateY
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        
+      h3.title.title--primary.text-center Thông tin thị trường
+      +news-sp(subNews)
+      .text-center.btn--translateY
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+
+    +footer-sp().mt-5
+    
+  script(type='text/javascript', src='js/main.js')

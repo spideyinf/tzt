@@ -36,6 +36,10 @@
       {
         "title": "Timzatot - MOBILE - Tin tức chi tiết",
         "url": "s03_news-detail"
+      },
+      {
+        "title": "Timzatot - MOBILE - Sản phẩm",
+        "url": "s04_products"
       }
     ]
   }
