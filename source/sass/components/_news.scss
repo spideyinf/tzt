@@ -124,6 +124,15 @@
     height: 68px;
   }
 
+  &__title {
+    color: $primary-black;
+    font-weight: $font-weight-bold;
+    font-size: 16px;
+
+    @include respond-to(midphone-and-down) {
+      font-size: 14px;
+    }
+  }
   &__article {
     margin-top: 4px;
     max-height: 36px;

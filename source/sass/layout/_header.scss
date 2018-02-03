@@ -39,3 +39,23 @@
     padding: 14px;
   }
 }
+
+.filter-sp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__btn {
+    padding: 8px 12px;
+  }
+
+  &__link {
+    color: $primary-gray200;
+    font-size: 16px;
+
+    @include respond-to(smallphone-and-down) {
+      font-size: 14px;
+    }
+  }
+}

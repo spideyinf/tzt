@@ -25,4 +25,14 @@ mixin header-sp()
           h1.header__title.font-weight-bold Chuyên trang thương mại điện tử
           h2.header__sub-title So sánh giá & review thông tin sản phẩm
         +search-sp()(placeholder='Tìm kiếm sản phẩm so sánh giá')
-        
+
+mixin filter-sp()
+  ul.filter-sp
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Nơi bán
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Danh mục
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Giá
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Sắp xếp

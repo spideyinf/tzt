@@ -1,6 +1,6 @@
 mixin hot-deal()
   a.card.tzt-hot-deal&attributes(attributes)(href='#')
-    h5.tzt-hot-deal__title.font-size-18 Tên sản phẩm Lorem isprum de rose a pirum dote 
+    h5.tzt-hot-deal__title.font-size-18 Tên sản phẩm Lorem isprum de rose a pirum dote
     img.card-img-top.tzt-hot-deal__img(src= 'http://via.placeholder.com/168x180')
     .d-flex.justify-content-between.mt-2
       p Tiết kiệm
@@ -38,7 +38,7 @@ mixin coupon()
     img.card-img-top.tzt-coupon__img(src='http://via.placeholder.com/171x180')
     h6.title.title--orange-dark.my-2.px-2 Nội dung mã giảm giá Lorem isprum
     .text-center.px-2.my-2
-      p.font-weight-bold Cách thức sử dụng: 
+      p.font-weight-bold Cách thức sử dụng:
       p.my-1.font-color-gray100.font-size-12 Áp dụng cho mua các sản phẩm Mẹ và Bé trước 31/12/2018
       +button('Nhận mã giảm giá', 'anchor').btn--coupon.mt-3
 
@@ -110,3 +110,15 @@ mixin coupon-sp()
       h6.title Nội dung mã giảm giá Lorem isprum
       p.my-1.font-color-gray100.font-size-12 Áp dụng cho mua các sản phẩm Mẹ và Bé trước 31/12/2018
       +button('Nhận ngay', 'anchor').btn--coupon.btn-sm.mt-auto
+
+mixin product-search-sp()
+  .d-flex.product-search-sp&attributes(attributes)
+    .d-flex.justify-content-center.align-items-center
+      img.product-search-sp__img(src='images/sp_img2.png')
+    .d-flex.flex-column.justify-content-between.align-items-center.ml-2
+      h6.product-search-sp__title Chảo rán chống dính 30cm lớp gốm Ecolon- CA- F30
+      p.product-search-sp__price 699.000đ
+      p Có
+        span 03
+        span nơi bán
+      +button('Xem chi tiết', 'anchor').btn--solid

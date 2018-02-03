@@ -22,16 +22,22 @@
       "title": "Timzatot Sản phẩm chi tiết"
     },
     "s01_home": {
-      "title": "Timzatot Trang chủ"
+      "title": "Timzatot MOBILE Trang chủ"
     },
     "s02_news": {
-      "title": "Timzatot Tin tức"
+      "title": "Timzatot MOBILE Tin tức"
     },
     "s03_news-detail": {
-      "title": "Timzatot Tin tức chi tiết"
+      "title": "Timzatot MOBILE Tin tức chi tiết"
     },
     "s04_products": {
-      "title": "Timzatot Sản phẩm"
+      "title": "Timzatot MOBILE Sản phẩm"
+    },
+    "s05_product-search": {
+      "title": "Timzatot MOBILE Sản phẩm khi search"
+    },
+    "s06_product-detail": {
+      "title": "Timzatot MOBILE Sản phẩm chi tiết"
     }
   }
 }
