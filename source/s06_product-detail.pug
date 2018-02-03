@@ -5,45 +5,33 @@ include modules/elements/elements
 include modules/navbar/navbar
 include modules/cards/cards
 include modules/news/news
+include modules/navbar/navbar
 -
-  var thongTinSanPham = {
-    title: 'Thông tin sản phẩm',
+  var news = {
     news: [1, 2, 3, 4, 5, 6]
+  };
+
+  var subNews = {
+    news: [1, 2, 3]
   };
 
 doctype html
 html
-  +head(head.s01_home)
+  +head(head.s06_product-detail)
 
   body
     +header-sp()
-    +menu-sp()
-
     main.main-sp
-      h3.title.title--primary.text-center Giá tốt cho bạn
-      .d-flex.justify-content-between.flex-wrap.u-ml10
-        +hot-deal-sp()
-        +hot-deal-sp()
-        +hot-deal-sp()
-        +hot-deal-sp()
-        +hot-deal-sp()
-        +hot-deal-sp()
-      .text-center.my-2
+
+      h3.title.title--primary.text-center Tin tức liên quan
+      +news-sp(news)
+      .text-center.btn--translateY
         +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
-      h3.title.title--primary.text-center Mẹ và bé
-      .d-flex.justify-content-between.flex-wrap.u-ml10
+      h3.title.title--primary.text-center Sản phẩm liên quan
+      .d-flex.justify-content-between.flex-wrap.ml-2
         +product-card-sp()
         +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-      .text-center.my-2
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-
-      h3.title.title--primary.text-center Đồ gia dụng
-      .d-flex.justify-content-between.flex-wrap.u-ml10
         +product-card-sp()
         +product-card-sp()
         +product-card-sp()
@@ -53,18 +41,26 @@ html
       .text-center.my-2
         +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
-      h3.title.title--primary.text-center Deal tốt trong ngày
+      h3.title.title--primary.text-center Sản phẩm mới
+      .d-flex.justify-content-between.flex-wrap.ml-2
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+
+      h3.title.title--primary.text-center Deal tốt hôm nay
       .d-flex.flex-column
         +coupon-sp()
         +coupon-sp()
         +coupon-sp()
       hr.mt-0
       .text-center.my-2
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-
-      h3.title.title--primary.text-center Thông tin sản phẩm
-      +news-sp(thongTinSanPham)
-      .text-center.btn--translateY
         +button('Xem thêm', 'anchor').btn--solid.btn-lg
 
     +footer-sp().mt-5

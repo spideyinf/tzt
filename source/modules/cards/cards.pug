@@ -79,16 +79,16 @@ mixin product-detail()
 //- SP
 mixin hot-deal-sp()
   a.card.tzt-hot-deal.tzt-hot-deal--sp&attributes(attributes)(href='#')
-    h5.tzt-hot-deal__title.font-size-12.mb-1 Tên sản phẩm Lorem isprum de lotos apirin...
+    h5.tzt-hot-deal__title.font-size-12.mt-2.mb-1.mx-1 Tên sản phẩm Lorem isprum de lotos apirin...
     .d-flex.justify-content-center.align-items-center.w-100
       img.card-img-top.tzt-hot-deal__img(src='images/sp_img4.png')
-    .d-flex.justify-content-between.mt-1
+    .d-flex.justify-content-between.m-1
       p.tzt-hot-deal__saving.d-flex
         +ionicon('ion-arrow-down-c')
         span 25%
-      .div
+      .text-right
         p.tzt-hot-deal__old-price 209.000đ
-        p.title.font-size-14 180.000đ
+        p.title.font-size-16 180.000đ
 
 mixin product-card-sp()
   a.card.tzt-product-card(href='#')
@@ -121,4 +121,4 @@ mixin product-search-sp()
       p Có
         span 03
         span nơi bán
-      +button('Xem chi tiết', 'anchor').btn--solid
+      +button('Xem chi tiết', 'anchor').btn--coupon

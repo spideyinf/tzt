@@ -16,23 +16,13 @@ mixin header-sp()
   header.header.header--sp
     .d-flex.justify-content-between.align-items-center
       .d-flex.flex-column
-        h2.header__logo.mb-2
+        h2.header__logo.mb-2.js-hide-while-scrolling
           a(href='#') Timzatot logo
-        button.btn.btn--hamburger.mr-3
+        button.btn.btn--hamburger.mr-3.js-menu-trigger
           +ionicon('ion-android-menu').font-size-20
       .d-flex.flex-column.align-items.center
-        .text-center.w-100.mb-2
+        .text-center.w-100.mb-2.js-hide-while-scrolling
           h1.header__title.font-weight-bold Chuyên trang thương mại điện tử
           h2.header__sub-title So sánh giá & review thông tin sản phẩm
         +search-sp()(placeholder='Tìm kiếm sản phẩm so sánh giá')
 
-mixin filter-sp()
-  ul.filter-sp
-    li.filter-sp__btn
-      a(href='#').filter-sp__link Nơi bán
-    li.filter-sp__btn
-      a(href='#').filter-sp__link Danh mục
-    li.filter-sp__btn
-      a(href='#').filter-sp__link Giá
-    li.filter-sp__btn
-      a(href='#').filter-sp__link Sắp xếp

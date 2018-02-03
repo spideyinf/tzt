@@ -5,10 +5,17 @@
   background-color: $primary-white;
 
   @include respond-to(phone-and-down) {
-    padding: 8px;
-    flex: 1 1 128px;
-    height: 198px;
-    margin: 0 10px 10px 0;
+    padding: 0;
+    flex: 0 0 32%;
+    height: 210px;
+    margin: 0 4px 8px 0;
+  }
+
+  @include respond-to(midphone-and-down) {
+    padding: 0;
+    flex: 0 0 47%;
+    height: 210px;
+    margin: 0 8px 10px 0;
   }
 
   &__title {

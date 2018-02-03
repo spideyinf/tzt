@@ -1,3 +1,5 @@
+include ../elements/elements
+
 mixin navbar(activeLink)
   .tzt-navbar
    ul.container.d-flex
@@ -125,3 +127,270 @@ mixin navbar(activeLink)
     li.tzt-navbar__item(class= activeLink === 'Thông tin sản phẩm' ? 'tzt-navbar__item--active' : '')
       a.tzt-navbar__link(href='#')
         span Thông tin sản phẩm
+
+
+mixin filter-sp()
+  ul.filter-sp
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Nơi bán
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Danh mục
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Giá
+    li.filter-sp__btn
+      a(href='#').filter-sp__link Sắp xếp
+
+-
+  var menuAccordion = [
+    {href: '#danhMucSP', id: 'danhMucSP', title: 'Danh mục sản phẩm'},
+    {href: '#tinTuc', id: 'tinTuc', title: 'Tin tức'}
+  ];
+
+mixin menu-sp()
+  .menu-sp-bg.d-none
+  .menu-sp.menu-sp--top.menu-sp--close
+    .menu-sp__main
+      +accordion(menuAccordion)
+        +set-block('danhMucSP')
+          ul.menu-sp__cell-group.menu-sp__cell-group--top
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Mẹ và bé
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sữa
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Bỉm
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Xe đẩy
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Đồ chơi
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Thiết bị gia dụng
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Thiết bị 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Thiết bị 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Thiết bị 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Thiết bị 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Điện thoại - Máy tính bảng
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Máy tính- thiết bị văn phòng
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Thời trang
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Điện gia dụng
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Mỹ phẩm
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Làm đẹp- Sức khỏe
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Sách
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Tivi- Âm thanh
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Thể thao- dã ngoại
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Thực phẩm
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Văn phòng phẩm
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Ô tô / Xe máy
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link.js-menu-link Nhà cửa- đời sống
+              .menu-sp.menu-sp--sub.menu-sp--sub-close
+                .menu-sp__back
+                  +ionicon('ion-ios-arrow-back').menu-sp__icon
+                h6.title.title--primary.text-center Lựa chọn sản phẩm
+                ul.menu-sp__cell-group.menu-sp__cell-group--sub
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 1
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 2
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 3
+                  li.menu-sp__cell
+                    a(href='#').menu-sp__cell__link Sublink 4
+        +set-block('tinTuc')
+          ul.menu-sp__cell-group.menu-sp__cell-group--top
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link Tin mới nhất
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link Tin nhiều người quan tâm
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link Đánh giá thị trường
+            li.menu-sp__cell
+              a(href='#').menu-sp__cell__link Mẹo vặt
+      ul.mt-1
+        li.w-100.mt-1
+          a(href='#').title.title--orange-dark.font-size-15 Khuyến mại giảm giá
+        li.w-100.mt-1
+          a(href='#').title.title--orange-dark.font-size-15 Thông tin sản phẩm
+    .menu-sp__outer

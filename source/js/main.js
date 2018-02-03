@@ -182,4 +182,17 @@ $(function() {
     verticalSwiping: true,
     arrow: true
   });
+
+  // Menu control
+  $('.js-menu-trigger').on('click', function() {
+    $('.menu-sp-bg').toggleClass('d-none');
+    $('.menu-sp--top').toggleClass('menu-sp--close');
+    $('body').toggleClass('modal-open');
+  });
+
+  $('.menu-sp__outer').on('click', function() {
+    $('.menu-sp-bg').toggleClass('d-none');
+    $('.menu-sp--top').toggleClass('menu-sp--close');
+    $('body').toggleClass('modal-open');
+  });
 });
