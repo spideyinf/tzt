@@ -20,6 +20,7 @@ html
 
   body
     +header-sp()
+    +menu-sp()
     main.main-sp
       +breadcrumb('Trang chủ', 'Đánh giá sản phẩm')
 
@@ -96,28 +97,28 @@ html
       h3.title.title--primary.text-center Tin liên quan
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Tin mới
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Mẹo vặt
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Thông tin thị trường
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Đánh giá sản phẩm
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-      
+        +button('Xem thêm', 'anchor').btn--solid
+
       h3.title.title--primary.text-center Sản phẩm liên quan
       .d-flex.justify-content-between.flex-wrap.u-ml10
         +product-card-sp()
@@ -127,8 +128,8 @@ html
         +product-card-sp()
         +product-card-sp()
       .text-center.my-2
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
     +footer-sp().mt-5
-    
+
   script(type='text/javascript', src='js/main.js')

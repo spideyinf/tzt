@@ -21,6 +21,7 @@ html
 
   body
     +header-sp()
+    +menu-sp()
     main.main-sp
       +filter-sp()
       +product-search-sp()
@@ -28,20 +29,15 @@ html
       +product-search-sp()
       +product-search-sp()
       +product-search-sp()
+      +product-search-sp()
+      +product-search-sp()
+      +product-search-sp()
+      +product-search-sp()
+      +product-search-sp()
+      +product-search-sp()
 
-      .text-center.my-2
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-
-      h3.title.title--primary.text-center Sản phẩm liên quan
-      .d-flex.justify-content-between.flex-wrap.ml-2
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-        +product-card-sp()
-      .text-center.my-2
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+      .text-center.my-3
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Nhiều người quan tâm
       .d-flex.flex-wrap.mx-3
@@ -57,27 +53,23 @@ html
       h3.title.title--primary.text-center Tin tức liên quan
       +news-sp(news)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
       h3.title.title--primary.text-center Tin mới
       +news-sp(subNews)
       .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+        +button('Xem thêm', 'anchor').btn--solid
 
-      h3.title.title--primary.text-center Đánh giá sản phẩm
-      +news-sp(subNews)
-      .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-
-      h3.title.title--primary.text-center Mẹo vặt
-      +news-sp(subNews)
-      .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
-
-      h3.title.title--primary.text-center Thông tin thị trường
-      +news-sp(subNews)
-      .text-center.btn--translateY
-        +button('Xem thêm', 'anchor').btn--solid.btn-lg
+      h3.title.title--primary.text-center Sản phẩm liên quan
+      .d-flex.justify-content-between.flex-wrap.ml-2
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+        +product-card-sp()
+      .text-center.my-2
+        +button('Xem thêm', 'anchor').btn--solid
 
     +footer-sp().mt-5
 

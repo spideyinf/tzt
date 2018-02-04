@@ -32,6 +32,11 @@
         width: 98px;
         height: 32px;
       }
+
+      @include respond-to(smallphone-and-down) {
+        width: 90px;
+        height: 30px;
+      }
     }
   }
 

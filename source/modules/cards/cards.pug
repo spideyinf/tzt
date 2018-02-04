@@ -122,3 +122,12 @@ mixin product-search-sp()
         span 03
         span nơi bán
       +button('Xem chi tiết', 'anchor').btn--coupon
+
+mixin product-detail-sp()
+  .product-detail-sp-row.d-flex.justify-content-between.align-items-center.px-2
+    .d-flex.justify-content-center.align-items-center
+      img(src='https://via.placeholder.com/58x52')
+    .product-detail-sp-row__holder
+      h5.title.ml-1 vienthonga.com
+      p.title.title--orange-dark.font-size-16.ml-1 18.000.000đ
+    +button('ĐẾN NƠI BÁN').btn-sm.ml-1

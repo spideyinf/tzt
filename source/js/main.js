@@ -87,6 +87,12 @@ $(function() {
 
   $('.nano').nanoScroller();
 
+  $('.s06-product-detail-carousel').owlCarousel({
+    nav: false,
+    dots: true,
+    items: 1
+  });
+
   (function goToTop() {
     $(window).scroll(function() {
       if ($(window).scrollTop() >= 200) {

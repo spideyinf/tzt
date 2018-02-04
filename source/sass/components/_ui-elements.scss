@@ -200,3 +200,25 @@
     line-height: 14px;
   }
 }
+
+.s06-product-detail-carousel {
+  max-width: 33vw;
+}
+
+.owl-theme .owl-dots {
+  @include respond-to(phone-and-down) {
+    margin-top: 5px;
+
+    .owl-dot span {
+      width: 7px;
+      height: 7px;
+      margin: 3px;
+    }
+  }
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  @include respond-to(phone-and-down) {
+    margin-top: 5px;
+  }
+}
