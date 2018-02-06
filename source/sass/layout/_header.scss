@@ -7,13 +7,14 @@
   &__sub-title {
     color: $primary-silver;
     font-size: 20px;
+    margin-bottom: 2px;
 
     @include respond-to(phone-and-down) {
       font-size: 14px;
     }
 
     @include respond-to(smallphone-and-down) {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 
@@ -27,20 +28,28 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      margin-bottom: 4px;
 
       @include respond-to(phone-and-down) {
-        width: 98px;
-        height: 32px;
+        width: 132px;
       }
 
       @include respond-to(smallphone-and-down) {
-        width: 90px;
-        height: 30px;
+        width: 120px;
       }
     }
   }
 
   &--sp {
-    padding: 14px;
+    padding: 14px 0 0;
+    margin-bottom: 18px;
+  }
+
+  &__search-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    transform: translateY(14px);
+    margin-top: -12px;
   }
 }
