@@ -9,11 +9,11 @@
     font-size: 20px;
 
     @include respond-to(phone-and-down) {
-      font-size: 14px;
+      font-size: 15px;
     }
 
     @include respond-to(smallphone-and-down) {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 
@@ -29,18 +29,16 @@
       background-size: contain;
 
       @include respond-to(phone-and-down) {
-        width: 98px;
-        height: 32px;
+        width: 152px;
       }
 
       @include respond-to(smallphone-and-down) {
-        width: 90px;
-        height: 30px;
+        width: 132px;
       }
     }
   }
 
   &--sp {
-    padding: 14px;
+    padding: 18px 0 12px;
   }
 }

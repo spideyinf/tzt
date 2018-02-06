@@ -12,7 +12,7 @@
 
     &::placeholder {
       @include respond-to(phone-and-down) {
-        font-size: rem(12);
+        font-size: rem(13);
       }
     }
   }
@@ -35,8 +35,15 @@
   }
 
   &--sp {
-    height: 28px;
-    max-width: 240px;
+    height: 32px;
+    @include respond-to(phone-and-down) {
+      max-width: 320px;
+      margin-top: 6px;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      margin: 6px 14px 0;
+    }
 
     .search__icon {
       font-size: 22px;

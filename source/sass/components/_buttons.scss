@@ -134,7 +134,12 @@
   }
 
   &--hamburger {
-    padding: 3px 22px;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    padding: 0;
+    border: 0;
+    color: $white;
     align-self: start;
   }
 

@@ -14,15 +14,13 @@ mixin header()
 
 mixin header-sp()
   header.header.header--sp
-    .d-flex.justify-content-between.align-items-center
-      .d-flex.flex-column
-        h2.header__logo.mb-2.js-hide-while-scrolling
-          a(href='#') Timzatot logo
-        button.btn.btn--hamburger.mr-3.js-menu-trigger
-          +ionicon('ion-android-menu').font-size-20
-      .d-flex.flex-column.align-items.center
-        .text-center.w-100.mb-2.js-hide-while-scrolling
-          h1.header__title.font-weight-bold Chuyên trang thương mại điện tử
-          h2.header__sub-title So sánh giá & review thông tin sản phẩm
+    button.btn.btn--hamburger.mr-3.js-menu-trigger
+      +ionicon('ion-android-menu').font-size-28
+    .d-flex.flex-column.justify-content-center.align-items-center
+      h2.header__logo.js-hide-while-scrolling
+        a(href='#') Timzatot logo
+      h1.header__title.font-weight-bold Chuyên trang thương mại điện tử
+      h2.header__sub-title So sánh giá & review sản phẩm
+      .d-flex.justify-content-center.w-100
         +search-sp()(placeholder='Tìm kiếm sản phẩm so sánh giá')
 
