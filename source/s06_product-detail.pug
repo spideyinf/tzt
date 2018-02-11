@@ -29,19 +29,19 @@ html
       .d-flex.product-detail-sp.mx-2
         .s06-product-detail-carousel.owl-carousel.owl-theme
           .item
-            img.product-detail-sp__img(src='images/sp_img1.png')
-          .item
             img.product-detail-sp__img(src='images/sp_img2.png')
           .item
             img.product-detail-sp__img(src='images/sp_img3.png')
-        .d-flex.flex-column.align-items-center.w-100.px-2
-          a(href='#').d-flex.justify-content-between.align-items-center.w-100.pb-1
+          .item
+            img.product-detail-sp__img(src='images/sp_img2.png')
+        .product-detail-sp__top-prices
+          a(href='#').product-detail-sp__top-price
             h6.title.font-size-15 Lazada
             p.product-detail-sp__price 16,910,000đ
-          a(href='#').d-flex.justify-content-between.align-items-center.w-100.pb-1
+          a(href='#').product-detail-sp__top-price
             h6.title.font-size-15 Adayroi
             p.product-detail-sp__price 17,000,000đ
-          a(href='#').d-flex.justify-content-between.align-items-center.w-100.pb-1
+          a(href='#').product-detail-sp__top-price
             h6.title.font-size-15 Tiki
             p.product-detail-sp__price 17,010,000đ
 
@@ -54,7 +54,7 @@ html
       hr
 
       h4.title.m-2 Thông tin sản phẩm
-      p.text-justify.m-3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, velit optio. Nemo omnis veritatis at fuga quibusdam, provident iure! Reprehenderit quibusdam quia eum perferendis expedita eligendi fugiat harum nesciunt reiciendis, suscipit, quis incidunt quaerat ex illo doloribus. Obcaecati accusamus nihil voluptatem inventore id dicta sit quasi consequuntur fugit doloremque. Animi.
+      p.product-detail-sp__des Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, velit optio. Nemo omnis veritatis at fuga quibusdam, provident iure! Reprehenderit quibusdam quia eum perferendis expedita eligendi fugiat harum nesciunt reiciendis, suscipit, quis incidunt quaerat ex illo doloribus. Obcaecati accusamus nihil voluptatem inventore id dicta sit quasi consequuntur fugit doloremque. Animi.
 
       .text-center
         +button('Xem thêm các nơi bán khác', 'anchor').btn--solid

@@ -184,21 +184,43 @@
   &__img {
     border-radius: 2px;
     max-width: 120px;
+    height: 120px;
+  }
+
+  &__top-prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    padding: 0 16px 0 4px;
+  }
+
+  &__top-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid $primary-silver;
   }
 
   &__price {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $primary-orange-dark;
-    border-radius: 2px;
     min-width: 96px;
     padding: 4px;
     font-weight: $font-weight-bold;
     font-size: rem(15);
     margin-left: auto;
-    margin-right: 8px;
     color: $primary-orange-dark;
+  }
+
+  &__des {
+    margin: 14px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 
