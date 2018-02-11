@@ -31,27 +31,16 @@
       margin-bottom: 4px;
 
       @include respond-to(phone-and-down) {
-<<<<<<< HEAD
-        width: 152px;
-      }
-
-      @include respond-to(smallphone-and-down) {
-        width: 132px;
-=======
         width: 132px;
       }
 
       @include respond-to(smallphone-and-down) {
         width: 120px;
->>>>>>> 3a183d20e0f8572a1b677204f134dbe0114dc116
       }
     }
   }
 
   &--sp {
-<<<<<<< HEAD
-    padding: 18px 0 12px;
-=======
     padding: 14px 0 0;
     margin-bottom: 18px;
   }
@@ -62,6 +51,5 @@
     justify-content: center;
     transform: translateY(14px);
     margin-top: -12px;
->>>>>>> 3a183d20e0f8572a1b677204f134dbe0114dc116
   }
 }

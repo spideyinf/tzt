@@ -10,6 +10,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var fs = require('fs');
 var pug = require('pug');
+var purify = require('gulp-purifycss');
 
 var scssLint = require('gulp-scss-lint');
 
@@ -261,6 +262,14 @@ gulp.task('combine-data', function(cb) {
   return runSequence(['combine-modules-json'], 'combine-modules-data', cb);
 });
 
+// = PurifyCSS
+gulp.task('purify', function() {
+  return gulp
+    .src('./dest/css/main.css')
+    .pipe(purify(['./dest/js/*.js', './dest/*.html']))
+    .pipe(gulp.dest(dest + '/css/'));
+});
+
 // ================ Develop
 
 gulp.task('dev', function(cb) {
@@ -279,6 +288,7 @@ gulp.task('build', function(cb) {
     'compile-styles',
     'compile-js',
     'build-html',
+    'purify',
     cb
   );
 });
